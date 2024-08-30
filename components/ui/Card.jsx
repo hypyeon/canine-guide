@@ -3,16 +3,14 @@ import React from 'react'
 import CenteredView from './CenteredView'
 
 const Card = (props) => {
-  const { radius, shadow, bgColor, size } = props;
+  const { bgColor, size, padding } = props;
 
   return (
-    <CenteredView 
-      bgColor={bgColor} 
-      size={size}
-      className={`shadow-${shadow} rounded-${radius}`}
+    <View 
+      className={`shadow-lg rounded-lg ${padding} ${size} ${bgColor} justify-center items-center`}
     >
       {props.children}
-    </CenteredView>
+    </View>
   )
 }
 

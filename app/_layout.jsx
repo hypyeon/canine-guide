@@ -13,7 +13,16 @@ SplashScreen.preventAutoHideAsync();
 export default function RootLayout() {
   const colorScheme = useColorScheme();
   const [loaded] = useFonts({
-    SpaceMono: require('../assets/fonts/SpaceMono-Regular.ttf'),
+    "RS-Reg": require('../assets/fonts/RobotoSlab-Regular.ttf'),
+    "RS-Li": require('../assets/fonts/RobotoSlab-Light.ttf'),
+    "RS-Med": require('../assets/fonts/RobotoSlab-Medium.ttf'),
+    "RS-ExLi": require('../assets/fonts/RobotoSlab-ExtraLight.ttf'),
+    "Ruda-Reg": require('../assets/fonts/Ruda-Regular.ttf'),
+    "Ruda-Med": require('../assets/fonts/Ruda-Medium.ttf'),
+    "Ruda-SB": require('../assets/fonts/Ruda-SemiBold.ttf'),
+    "Ruda-B": require('../assets/fonts/Ruda-Bold.ttf'),
+    "Ruda-ExB": require('../assets/fonts/Ruda-ExtraBold.ttf'),
+    "Ruda-Med": require('../assets/fonts/Ruda-Medium.ttf'),
   });
 
   useEffect(() => {
@@ -29,8 +38,7 @@ export default function RootLayout() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
-        <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-        <Stack.Screen name="+not-found" />
+        <Stack.Screen name="index" options={{ headerShown: false }} />
       </Stack>
     </ThemeProvider>
   );

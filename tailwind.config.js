@@ -25,7 +25,11 @@ module.exports = {
         'ruda-sb': ['Ruda-SB', 'sans-serif'],
         'ruda-b': ['Ruda-B', 'sans-serif'],
         'ruda-exb': ['Ruda-ExB', 'sans-serif'],
-      }
+      },
+      // boxShadow: {
+      //   'custom-sm': '0 2px 6px 0 rgba(0, 0, 0, 0.25)',
+      //   'custom-md': '0 8px 6px 0 rgba(0, 0, 0, 0.25)',
+      // },
     },
     fontSize: {
       'sm': '10px',

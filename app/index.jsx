@@ -1,7 +1,6 @@
-import { Text, Image, View } from 'react-native';
+import { Text, Image, View, Share, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import CenteredView from '../components/ui/CenteredView';
-import Card from '../components/ui/Card';
 import cover from '../assets/images/landing-human-pet.png';
 import share from '../assets/images/btn-share.png';
 import donate from '../assets/images/btn-donate.png';
@@ -12,6 +11,26 @@ import bowl from '../assets/images/bg-icon-bowl.png';
 import dog from '../assets/images/bg-icon-dog.png';
 
 export default function App() {
+
+  const onShare = async () => {
+    try {
+      const result = await Share.share({
+        message: '🐾 Discover the best resources for your furry friend with Canine Guide!',
+      });
+      if (result.action === Share.sharedAction) {
+        if (result.activityType) {
+          // Shared with activity type of result.activityType
+          Alert.alert('Shared successfully!');
+        } else {
+          // Shared
+          Alert.alert('Thanks for sharing!');
+        }
+      } 
+    } catch (error) {
+      Alert.alert('Error:', error.message);
+    }
+  };
+
   return (
     <CenteredView bgColor="bg-yellow" size="flex-1">
       <View
@@ -32,22 +51,25 @@ export default function App() {
           and we’re here to make it easier. 
         </Text>
       </View>
-      <View className='z-10'>
+      <View className='z-10 flex items-center'>
         <Buttons 
           type='start'
           text='GET STARTED'
-        ></Buttons>
+          href='/menu'
+        />
         <View className='flex flex-row w-[52vw] justify-between'>
           <Buttons 
             type='landing'
             bgColor='bg-white'
             src={share}
-          ></Buttons>
+            onShare={onShare}
+          />
           <Buttons 
             type='landing'
             bgColor='bg-sage'
             src={donate}
-          ></Buttons>
+            href='/donation'
+          />
         </View>
       </View>
       <View className='mt-12'>

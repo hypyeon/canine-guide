@@ -1,4 +1,4 @@
-import { Text, Image, View, Share, Alert } from 'react-native';
+import { Text, Image, View, Share, Alert, ScrollView } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import CenteredView from '../components/ui/CenteredView';
 import cover from '../assets/images/landing-human-pet.png';

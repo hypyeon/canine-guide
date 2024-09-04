@@ -37,8 +37,42 @@ export default function RootLayout() {
 
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <Stack>
-        <Stack.Screen name="index" options={{ headerShown: false }} />
+      <Stack
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#F8F7F4',
+            shadowColor: 'transparent',
+          },
+          headerTitleAlign: 'right',
+          headerTitleStyle: {
+            fontFamily: 'ruda-reg',
+            fontSize: 20,
+            textAlign: 'right',
+          },
+          headerTintColor: '#1e212b',
+        }}
+      >
+        <Stack.Screen 
+          name="index" 
+          options={{ 
+            title: '',
+            headerShown: false 
+          }} 
+        />
+        <Stack.Screen 
+          name="menu" 
+          options={{ 
+            title: '',
+            headerShown: true
+          }} 
+        />
+        <Stack.Screen 
+          name="donation"
+          options={{
+            title: 'Donations',
+            headerTitleAlign: 'left'
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

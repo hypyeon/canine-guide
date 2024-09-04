@@ -5,9 +5,11 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 const CenteredView = (props) => {
   const { bgColor, size } = props;
   return (
-    <SafeAreaView className={`${bgColor} ${size} justify-center items-center`}>
+    <SafeAreaView className={`${bgColor} h-full`}>
       <ScrollView contentContainerStyle={{ height: '100%' }}>
-        {props.children}
+        <View className={`${size} justify-center items-center`}>
+          {props.children}
+        </View>
       </ScrollView>
     </SafeAreaView>
   )

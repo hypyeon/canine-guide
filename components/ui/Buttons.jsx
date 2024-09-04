@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'expo-router'
 
 const Buttons = (props) => {
-  const { type, bgColor, src, text, txtColor, href, onShare } = props;
+  const { type, bgColor, src, text, txtColor, href, onShare, mb, imgPosition } = props;
 
   const chooseType = () => {
     switch (type) {
@@ -12,9 +12,9 @@ const Buttons = (props) => {
       case 'landing':
         return 'rounded-2xl shadow-md';
       case 'manual':
-        return 'bg-sage border-2 border-black py-2 w-72';
-      case 'tip':
-        return 'bg-black py-2 w-72';
+        return `bg-sage border-2 border-black ${mb}`;
+      case 'resource':
+        return `bg-black ${mb}`;
       default:
         return 'bg-yellow text-yellowtxt';
     }
@@ -38,7 +38,7 @@ const Buttons = (props) => {
             href={href}
           >
             <View 
-              className='pb-1 pt-2 w-[24vw] flex justify-center items-center'
+              className='pt-[2.5vw] w-[24vw] flex justify-center items-center'
             >
               <Image source={src} className='w-[8vw] h-[8vw]' />
             </View>
@@ -47,27 +47,47 @@ const Buttons = (props) => {
       } else {
         return (
           <View 
-            className='py-[1.5] w-[24vw] flex justify-center items-center'
+            className='py-2 w-[24vw] flex justify-center items-center'
           >
             <Image source={src} className='w-[8vw] h-[8vw]' />
           </View>
         )
       }
-      
     } else if (type === 'manual') {
       return (
-        <Text className='font-rs-reg text-xl text-black'>{text}</Text>
+        <Link 
+          className='font-rs-reg text-xl text-black py-3 w-[76vw] text-center'
+          href={href}
+        >
+          <Text>
+            {text}
+          </Text>
+        </Link>
       )
-    } else if (type === 'tip') {
+    } else if (type === 'resource') {
       return (
-        <Text className={`font-rs-reg text-xl ${txtColor}`}>{text}</Text> 
+        <Link 
+          className="relative"
+          href={href}
+        >
+          <View className="relative py-3 w-56 flex justify-center items-center">
+            <View className={`absolute ${imgPosition}`}>
+              <Image 
+                source={src} 
+              />
+            </View>
+            <Text className={`relative font-rs-reg text-xl ${txtColor}`}>
+              {text}
+            </Text>
+          </View>
+        </Link> 
       )
     }
   }
 
   return (
     <TouchableOpacity 
-      className={`${chooseType()} ${bgColor} flex justify-center items-center`}
+      className={`${chooseType()} ${bgColor}`}
       onPress={onShare ? onShare : null}
     >
       {renderContent()}

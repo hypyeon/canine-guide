@@ -1,10 +1,11 @@
 import { View } from 'react-native'
 import React from 'react'
+
 import Buttons from './Buttons'
-import vet from '../../assets/images/btn-icon-vet.png'
-import train from '../../assets/images/btn-icon-train.png'
-import store from '../../assets/images/btn-icon-shop.png'
-import shop from '../../assets/images/btn-icon-online.png'
+import vet from '../../../assets/images/btn-icon-vet.png'
+import train from '../../../assets/images/btn-icon-train.png'
+import store from '../../../assets/images/btn-icon-shop.png'
+import shop from '../../../assets/images/btn-icon-online.png'
 
 const data = [
   {

@@ -1,8 +1,8 @@
 import { View, Text } from 'react-native'
 import React from 'react'
-import CenteredView from '../components/ui/CenteredView'
-import ManualButtons from '../components/ui/ManualButtons'
-import ResourceButtons from '../components/ui/ResourceButtons'
+import CenteredView from '../components/ui/views/CenteredView'
+import ManualButtons from '../components/ui/buttons/ManualButtons'
+import ResourceButtons from '../components/ui/buttons/ResourceButtons'
 
 const Menu = () => {
   return (

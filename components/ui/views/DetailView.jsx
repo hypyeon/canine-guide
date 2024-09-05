@@ -2,7 +2,7 @@ import { View, ScrollView, SafeAreaView } from 'react-native'
 import React from 'react'
 // import { SafeAreaView } from 'react-native-safe-area-context'
 
-const DetailPage = (props) => {
+const DetailView = (props) => {
   const { bgColor, size } = props;
   return (
     <SafeAreaView className={`${bgColor}`}>
@@ -15,4 +15,4 @@ const DetailPage = (props) => {
   )
 }
 
-export default DetailPage
+export default DetailView

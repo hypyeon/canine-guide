@@ -4,7 +4,7 @@ import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { Link } from 'expo-router'
 
 const Note = (props) => {
-  const { content, link, emphasis } = props;
+  const { content, link, emphasis, position } = props;
 
   const renderText = () => {
     let parts = content.split(/(\[emphasis\]|\[link\])/);
@@ -34,7 +34,7 @@ const Note = (props) => {
   }
 
   return (
-    <View className="w-[82vw] h-fit mb-8">
+    <View className={`w-[82vw] h-fit mb-${position === 'top' ? 8 : 2 }`}>
       <Text className="font-ruda-reg text-[14px] text-center text-black">
         {renderText()}
       </Text>

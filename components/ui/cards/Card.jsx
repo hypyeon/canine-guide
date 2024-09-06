@@ -4,7 +4,7 @@ import Feather from '@expo/vector-icons/Feather';
 import { Link } from 'expo-router'
 
 const Card = (props) => {
-  const { index, title, src, content, href, mb, bold = [] } = props;
+  const { index, title, src, content, href, mb, bold = [], food = Boolean } = props;
 
   const bgColor = index % 2 === 0 ? 'bg-black' : 'bg-white';
   const txtColor = index % 2 === 0 ? 'text-white' : 'text-black';
@@ -45,13 +45,23 @@ const Card = (props) => {
     })
   }
 
+  const renderFoodContent = () => {
+    return (
+      <>
+        <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-[14px]`}>{content[0]} {`\n\n`}</Text>
+        <Text className="w-[68vw] font-ruda-b text-red">Potential effects{`\n`}</Text>
+        <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-1`}>{content[1]}</Text>
+      </>
+    )
+  }
+
   return (
     <View 
       className={`${bgColor} ${mb} shadow-xl rounded-2xl w-[80vw] justify-center items-center p-4`}
     >
       {href ? (
         <Link href={href} className='flex flex-row w-[68vw]'>
-          <Text className={`${txtColor} w-[68vw] pb-4 mb-8 font-rs-reg text-[16px] leading-5`}>
+          <Text key={index} className={`${txtColor} w-[68vw] pb-4 mb-8 font-rs-reg text-[16px] leading-5`}>
             {title}
           </Text>
           <View className="pl-1">
@@ -59,8 +69,11 @@ const Card = (props) => {
           </View>
         </Link>
       ) : (
-        <Text className={`${txtColor} w-[68vw] pb-1 font-rs-reg text-[16px] leading-5`}>
-          {title}
+        <Text key={index} className={`${txtColor} w-[68vw] pb-1 font-rs-reg text-[16px] leading-5`}>
+          {food === true ? 
+            <>
+              <Text className="text-[13px]">❌</Text> {title}
+            </> : title}
         </Text>
       )}
       <View className="border-b border-yellow mt-2 mb-4 w-[72vw]" />
@@ -75,7 +88,7 @@ const Card = (props) => {
         {href ? (
           <>"{renderText()}"</>
         ) : (
-          renderText()
+          <>{food === true ? renderFoodContent() : renderText()}</>
         )}
       </Text>
     </View>

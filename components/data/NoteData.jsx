@@ -44,6 +44,19 @@ const noteData = [
         content: `Caring for a senior dog is a deeply rewarding experience that requires extra attention, love, and understanding. Prioritize comfort, regular vet visits, and gentle exercise to ensure your loyal companion enjoys their golden years to the fullest.`
       }
     ]
+  },
+  {
+    page: 'unsafe',
+    list: [
+      {
+        position: 'top',
+        content: `NOT ALL FOODS ARE SAFE FOR DOGS! \nIt's important to remember that some foods that are harmless or even healthy for humans can be extremely dangerous for dogs. Feeding your dog these foods can lead to severe health issues or even be life-threatening.`
+      },
+      {
+        position: 'bottom',
+        content: `If you suspect your dog has ingested any of these items, contact your veterinarian or an emergency pet clinic immediately. \n\nRemember, foods not mentioned here could also be dangerous. Always research or consult your vet before offering your dog anything not listed in the SAFE food section. Your careful attention is key to keeping your dog healthy and safe.`
+      }
+    ]
   }
 ];
 

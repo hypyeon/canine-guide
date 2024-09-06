@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Text } from 'react-native'
 import DetailView from '../ui/views/DetailView'
 import Carousel from '../ui/carousel/Carousel'
 import PuppyPage from './PuppyPage'

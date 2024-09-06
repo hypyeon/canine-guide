@@ -129,6 +129,108 @@ const CardData = [
         content: `Make your home safe by removing hazards that could lead to falls or injuries. Ensure your dog has easy access to their food, water, and outdoor areas. \n\nRegularly assess your dog’s quality of life, considering factors like comfort, mobility, and enjoyment of daily activities. \n\nProvide extra attention and affection to reassure your senior dog. Your presence and care are crucial for their emotional well-being. \n\nSeek support from friends, family, or pet support groups to navigate the challenges of caring for a senior dog. \n\nBe prepared to make difficult decisions about end-of-life care in consultation with your vet. Palliative care and hospice options can help manage discomfort and provide a dignified end. \n\nSpend quality time with your senior dog, enjoying the special moments and memories you create together. Celebrate their life and the bond you share.`
       }
     ]
+  },
+  {
+    page: 'unsafe',
+    list: [
+      {
+        title: 'Chocolate',
+        content: [
+          'Contains theobromine and caffeine, which are toxic to dogs.',
+          'Vomiting, diarrhea, rapid breathing, increased heart rate, seizures, and in severe cases, death.'
+        ]
+      },
+      {
+        title: 'Onions and Garlic',
+        content: [
+          'Can cause sudden kidney failure in dogs.',
+          'Vomiting, lethargy, loss of appetite, and kidney failure.'
+        ]
+      },
+      {
+        title: 'Grapes and Raisins',
+        content: [
+          'Can cause sudden kidney failure in dogs.',
+          'Vomiting, lethargy, loss of appetite, and kidney failure.'
+        ]
+      },
+      {
+        title: 'Avocado',
+        content: [
+          'Contains persin, which can cause vomiting and diarrhea in dogs.',
+          'Gastrointestinal distress, including vomiting and diarrhea.'
+        ]
+      },
+      {
+        title: 'Macadamia Nuts',
+        content: [
+          `Contains an unknown toxin that affects dogs' nervous systems.`,
+          `Weakness, vomiting, tremors, and hyperthermia.`
+        ]
+      },
+      {
+        title: 'Bones from Cooked Meat',
+        content: [
+          `Can splinter and cause blockages or tears in the digestive system.`,
+          `Choking, internal bleeding, and punctures in the stomach or intestines.`
+        ]
+      },
+      {
+        title: 'Xylitol',
+        content: [
+          `Can be found in sugar-free gum, candy, and some peanut butter. Causes a rapid release of insulin, leading to hypoglycemia (low blood sugar).`,
+          `Vomiting, loss of coordination, seizures, liver failure, and in severe cases, death.`
+        ]
+      },
+      {
+        title: 'Alcohol',
+        content: [
+          `Dogs are far more sensitive to alcohol than humans.`,
+          `Vomiting, diarrhea, decreased coordination, difficulty breathing, tremors, coma, and death.`
+        ]
+      },
+      {
+        title: 'Caffeine',
+        content: [
+          `Found in coffee, tea, energy drinks, and some medications. Contains methylxanthines, which are toxic to dogs.`,
+          `Restlessness, rapid breathing, heart palpitations, muscle tremors, seizures, and death.`
+        ]
+      },
+      {
+        title: 'Raw Dough (containing yeast)',
+        content: [
+          `Yeast produces alcohol as it ferments, which can expand in the stomach and cause alcohol poisoning in dogs.`,
+          `Severe bloating, alcohol poisoning, and gastric distress.`
+        ]
+      },
+      {
+        title: 'Fat Trimmings and Greasy Foods',
+        content: [
+          `High-fat content can lead to pancreatitis in dogs.`,
+          `Vomiting, diarrhea, and inflammation of the pancreas.`
+        ]
+      },
+      {
+        title: 'Salt',
+        content: [
+          `Excessive salt intake can lead to sodium ion poisoning in dogs.`,
+          `Excessive thirst, urination, vomiting, diarrhea, tremors, seizures, and death.`
+        ]
+      },
+      {
+        title: 'Milk and Dairy Products',
+        content: [
+          `Many dogs are lactose intolerant, leading to digestive issues.`,
+          `Vomiting, diarrhea, and gastrointestinal distress.`
+        ]
+      }
+    ]
+  },
+  {
+    page: 'safe',
+    list: [
+      
+    ]
   }
 ]
 

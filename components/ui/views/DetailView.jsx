@@ -6,7 +6,7 @@ const DetailView = (props) => {
   const { bgColor, size } = props;
   return (
     <SafeAreaView className={`${bgColor}`}>
-      <ScrollView contentContainerStyle={{ height: 'fit-content' }}>
+      <ScrollView contentContainerStyle={{ minHeight: '100%' }}>
         <View className={`${size} justify-start items-center py-8`}>
           {props.children}
         </View>

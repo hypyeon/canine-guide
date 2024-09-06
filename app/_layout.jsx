@@ -4,6 +4,7 @@ import { Stack } from 'expo-router';
 import * as SplashScreen from 'expo-splash-screen';
 import { useEffect } from 'react';
 import 'react-native-reanimated';
+import { Text } from 'react-native';
 
 import { useColorScheme } from '@/hooks/useColorScheme';
 
@@ -35,6 +36,14 @@ export default function RootLayout() {
     return null;
   }
 
+  const renderTitle = (title) => {
+    return (
+      <Text style={{ fontFamily: 'RS-Reg', fontSize: 18, color: '#1e212b' }}>
+        {title}
+      </Text>
+    );
+  }
+
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack
@@ -43,11 +52,9 @@ export default function RootLayout() {
             backgroundColor: '#F8F7F4',
             shadowColor: 'transparent',
           },
-          headerTitleAlign: 'right',
           headerTitleStyle: {
-            fontFamily: 'ruda-reg',
-            fontSize: 20,
-            textAlign: 'right',
+            fontFamily: 'RS-Reg',
+            fontSize: 18,
           },
           headerTintColor: '#1e212b',
         }}
@@ -63,14 +70,20 @@ export default function RootLayout() {
           name="menu" 
           options={{ 
             title: '',
-            headerShown: true
           }} 
         />
         <Stack.Screen 
           name="donation"
           options={{
-            title: 'Donations',
-            headerTitleAlign: 'left'
+            title: '',
+            headerRight: () => renderTitle('Donation'),
+          }}
+        />
+        <Stack.Screen 
+          name="guides"
+          options={{
+            title: '',
+            headerRight: () => renderTitle('Guides for each life stage'),
           }}
         />
       </Stack>

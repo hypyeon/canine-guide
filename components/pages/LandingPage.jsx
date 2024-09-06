@@ -1,6 +1,7 @@
 import React from 'react';
 import { Text, Image, View, Share, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
+import { Link } from 'expo-router';
 
 import CenteredView from '../ui/views/CenteredView';
 import cover from '../../assets/images/landing-human-pet.png';
@@ -35,7 +36,7 @@ export default function LandingPage() {
   return (
     <CenteredView bgColor="bg-yellow" size="flex-1">
       <View
-        className='justify-center items-center bg-white py-12 rounded-3xl shadow-md mt-16 z-10'
+        className='justify-center items-center bg-white py-12 rounded-3xl shadow-md mt-12 z-10'
       >
         <Text className='text-yellowtxt font-ruda-med'>the ultimate</Text>
         <Text className='text-black font-rs-exli text-title mb-8'>CANINE GUIDE</Text>
@@ -73,12 +74,15 @@ export default function LandingPage() {
           />
         </View>
       </View>
-      <View className='mt-12'>
-        <Text className='text-[#FFF] text-[12px] font-rs-med tracking-wide'>developed with ♡ by HP</Text>
+      <View className='mt-8 flex justify-center items-center'>
+        <Text className='text-[#FFF] text-[12px] font-rs-reg tracking-wide shadow-md'>
+          developed with 💛 by <Link href="https://hypyeon.github.io/portfolio-web-v2/" className="font-rs-med tracking-wider">HP</Link>
+        </Text>
+        <Text className="text-[#FFF] font-ruda-reg text-[11px]">icons by <Link href="https://icons8.com">Icons8</Link></Text>
       </View>
       <View className='relative w-[100vw]'>
-        <Image source={bowl} className='absolute left-0 bottom-40 z-0' />
-        <Image source={dog} className='absolute right-2 bottom-28 z-0' />
+        <Image source={bowl} className='absolute -left-1 bottom-44 z-0' />
+        <Image source={dog} className='absolute right-1 bottom-32 z-0' />
         <Image source={bone} className='absolute left-8 bottom-0 z-0' />
       </View>
       <StatusBar style="auto" />

@@ -4,23 +4,31 @@ import EvilIcons from '@expo/vector-icons/EvilIcons';
 import { Link } from 'expo-router'
 
 const Note = (props) => {
-  const { content, link, emphasis, position } = props;
+  const { content, link = [], emphasis, position } = props;
 
   const renderText = () => {
     let parts = content.split(/(\[emphasis\]|\[link\])/);
+    let empIndex = 0;
+    let linkIndex = 0;
 
     return parts.map((part, index) => {
-      if (part === '[emphasis]' && emphasis) {
+      if (part === '[emphasis]' && emphasis[empIndex]) {
+        const current = emphasis[empIndex];
+        empIndex++;
+
         return (
           <Text key={index} className="font-bold">
-            {emphasis}
+            {current}
           </Text>
         )
-      } else if (part === '[link]' && link) {
+      } else if (part === '[link]' && link[linkIndex]) {
+        const current = link[linkIndex];
+        linkIndex++;
+
         return (
-          <Link key={index} href={link.href} className="flex flex-row items-center">
+          <Link key={index} href={current.href} className="flex flex-row items-center">
             <Text className="font-ruda-b underline">
-              {link.text}
+              {current.text}
             </Text>
             <View>
               <EvilIcons name="external-link" size={16} />

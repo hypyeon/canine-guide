@@ -9,7 +9,7 @@ const data = [
   },
   {
     text: 'Guides for Each Life Stage',
-    href: '/manual'
+    href: '/guides'
   },
   {
     text: 'Safe & Unsafe Food for Dogs',

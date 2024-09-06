@@ -19,7 +19,7 @@ const DonationPage = () => {
       <Note 
         position="bottom"
         content={bottomNote.content}
-        link={{ text: bottomNote.link.text, href: bottomNote.link.url }}
+        link={bottomNote.link.map(({ text, url }) => ({ text, href: url }))}
       />
     </DetailView>
   )

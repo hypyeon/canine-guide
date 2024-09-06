@@ -1,6 +1,5 @@
-import { View, ScrollView } from 'react-native'
+import { View, ScrollView, SafeAreaView } from 'react-native'
 import React from 'react'
-import { SafeAreaView } from 'react-native-safe-area-context'
 
 const CenteredView = (props) => {
   const { bgColor, size } = props;

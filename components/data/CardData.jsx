@@ -229,7 +229,137 @@ const CardData = [
   {
     page: 'safe',
     list: [
-      
+      {
+        title: 'Best Foods for Dogs',
+        content: `[list][list][list][list][list][list][list][list]`,
+        list: [
+          {
+            subtitle: 'Lean Meat (Chicken, Turkey, Beef)',
+            elements: [
+              'Excellent source of protein, essential amino acids, and B vitamins.',
+              'How to serve: Cooked, unseasoned, and without bones or skin.'
+            ]
+          },
+          {
+            subtitle: 'Carrots',
+            elements: [
+              'Low-calorie treat rich in fiber, beta-carotene, and vitamin A.',
+              'How to serve: Raw or cooked, cut into bite-sized pieces.'
+            ]
+          },
+          {
+            subtitle: 'Pumpkin',
+            elements: [
+              'High in fiber and vitamin A, great for digestive health.',
+              'How to serve: Plain, canned pumpkin (not pie filling) or cooked fresh pumpkin.'
+            ]
+          },
+          {
+            subtitle: 'Blueberries',
+            elements: [
+              'Packed with fiber, vitamins C and K, and antioxidant-rich fruit that supports brain health and immunity.',
+              'How to serve: Fresh or frozen, as a treat or mixed into meals.'
+            ]
+          },
+          {
+            subtitle: 'Sweet Potatoes',
+            elements: [
+              'Rich in dietary fiber, vitamins A and C, and beta-carotene.',
+              'How to serve: Cooked and mashed or cut into small pieces, without added sugar or seasoning.'
+            ]
+          },
+          {
+            subtitle: 'Apples',
+            elements: [
+              'High in fiber and vitamins A and C, great for dental health.',
+              'How to serve: Sliced and cored (remove seeds), can be fed raw or lightly cooked.'
+            ]
+          },
+          {
+            subtitle: 'Cooked Salmon',
+            elements: [
+              'Rich in omega-3 fatty acids, protein, and essential nutrients for skin and coat health.',
+              'How to serve: Cooked, deboned, and without seasoning.'
+            ]
+          },
+          {
+            subtitle: 'Eggs',
+            elements: [
+              'Excellent source of protein, vitamins, and minerals.',
+              'How to serve: Cooked without oil, butter, or seasoning.'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Good in Normal Amounts',
+        content: `[list][list][list][list][list][list][list][list][list]`,
+        list: [
+          {
+            subtitle: 'Green Beans',
+            elements: [
+              'Low-calorie, high in fiber, and vitamins C and K.',
+              'How to serve: Steamed or raw, plain and unsalted.'
+            ]
+          },
+          {
+            subtitle: 'Cucumbers',
+            elements: [
+              'Low-calorie, hydrating, and contains vitamins K and C.',
+              'How to serve: Sliced and unseasoned.'
+            ]
+          },
+          {
+            subtitle: 'Broccoli',
+            elements: [
+              'Contains fiber, vitamin C, and is low in fat.',
+              'How to serve: Steamed or raw in small quantities.'
+            ]
+          },
+          {
+            subtitle: 'Rice (White or Brown)',
+            elements: [
+              'Easy on the stomach and provides energy.',
+              'How to serve: Plain, cooked rice, especially useful for dogs with digestive issues.'
+            ]
+          },
+          {
+            subtitle: 'Oatmeal',
+            elements: [
+              'Good source of soluble fiber, beneficial for dogs with bowel irregularities.',
+              'How to serve: Cooked plain, without added sugar or flavorings.'
+            ]
+          },
+          {
+            subtitle: 'Watermelon',
+            elements: [
+              'Hydrating and low-calorie, with vitamins A, B6, and C.',
+              'How to serve: Seedless and rindless, cut into small chunks.'
+            ]
+          },
+          {
+            subtitle: 'Peanut Butter',
+            elements: [
+              'Good source of protein, healthy fats, and vitamins E and B.',
+              'How to serve: In moderation, without xylitol or added sugar.'
+            ]
+          },
+          {
+            subtitle: 'Bananas',
+            elements: [
+              'High in potassium, fiber, and vitamins B6 and C.',
+              'How to serve: In small amounts due to sugar content. Fresh, peeled, and cut into small pieces.'
+            ]
+          },
+          {
+            subtitle: 'Cheese',
+            elements: [
+              'High in protein, calcium, and vitamins A and B12.',
+              'How to serve: In moderation, as a treat for dogs that tolerate lactose.'
+            ]
+          }
+        ]
+      }
     ]
   }
 ]

@@ -5,7 +5,7 @@ const Carousel = (props) => {
   const { titles = [], onSelect, active } = props;
 
   return (
-    <View className="min-w-full mb-6 flex-row justify-center items-center gap-3">
+    <View className="min-w-full mb-5 flex-row justify-center items-center gap-3">
       {titles.map((title, index) => (
         <TouchableOpacity key={index} onPress={() => onSelect(title)}>
           <View 

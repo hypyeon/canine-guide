@@ -4,14 +4,15 @@ import Feather from '@expo/vector-icons/Feather';
 import { Link } from 'expo-router'
 
 const Card = (props) => {
-  const { index, title, src, content, href, mb, bold = [], food = Boolean } = props;
+  const { index, title, src, content, href, mb, bold = [], unsafe = Boolean, list = [], pb } = props;
 
   const bgColor = index % 2 === 0 ? 'bg-black' : 'bg-white';
   const txtColor = index % 2 === 0 ? 'text-white' : 'text-black';
 
-  const renderText = () => {
-    let parts = content.split(/(\[bold\])/);
+  const renderContent = () => {
+    let parts = content.split(/(\[bold\]|\[list\])/);
     let boldIndex = 0;
+    let listIndex = 0;
 
     return parts.map((part, index) => {
       if (part === '[bold]' && bold[boldIndex]) {
@@ -20,25 +21,34 @@ const Card = (props) => {
 
         return (
           <View>
-            <Text key={`bold-${index}`} className="font-ruda-b text-white">
+            <Text key={`bold-${index}`} className={`font-ruda-b ${txtColor}`}>
               {current}
             </Text>
           </View>
         )
-      // } else if (part === '[link]' && link[linkIndex]) {
-      //   const current = link[linkIndex];
-      //   linkIndex++;
+      } else if (part === '[list]' && list[listIndex]) {
+        const current = list[listIndex];
+        listIndex++;
+        let listCount = (content.match(/\[list\]/g) || []).length;
 
-      //   return (
-      //     <Link key={index} href={current.href} className="flex flex-row items-center">
-      //       <Text className="font-ruda-b underline">
-      //         {current.text}
-      //       </Text>
-      //       <View>
-      //         <EvilIcons name="external-link" size={16} />
-      //       </View>
-      //     </Link>
-      //   )
+        const getPb = () => {
+          return listIndex < listCount ? 'pb-3' : '';
+        }
+
+        return (
+          <View className={getPb()} key={index}>
+            <Text key={`list-${index}`} className={`font-ruda-b ${txtColor}`}>
+              {current.subtitle}
+            </Text>
+            <View className="pt-[2px]">
+              {current.elements.map((element, index) => (
+                <Text key={`element-${index}`} className={`font-ruda-reg ${txtColor}`}>
+                  {"  \u2022 "}{element}
+                </Text>
+              ))}
+            </View>
+          </View>          
+        )
       } else {
         return <Text key={`text-${index}`}>{part}</Text>;
       }
@@ -70,7 +80,7 @@ const Card = (props) => {
         </Link>
       ) : (
         <Text key={index} className={`${txtColor} w-[68vw] pb-1 font-rs-reg text-[16px] leading-5`}>
-          {food === true ? 
+          {unsafe === true ? 
             <>
               <Text className="text-[13px]">❌</Text> {title}
             </> : title}
@@ -88,7 +98,7 @@ const Card = (props) => {
         {href ? (
           <>"{renderText()}"</>
         ) : (
-          <>{food === true ? renderFoodContent() : renderText()}</>
+          <>{unsafe === true ? renderFoodContent() : renderContent()}</>
         )}
       </Text>
     </View>

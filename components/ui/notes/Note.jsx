@@ -42,7 +42,7 @@ const Note = (props) => {
   }
 
   return (
-    <View className={`w-[82vw] h-fit mb-${position === 'top' ? 8 : 2 }`}>
+    <View className={`w-[82vw] h-fit mb-${position === 'top' ? 6 : 2 }`}>
       <Text className="font-ruda-reg text-[14px] text-center text-black">
         {renderText()}
       </Text>

@@ -14,6 +14,7 @@ module.exports = {
         sagetxt: '#0FAB85',
         yellow: '#f7b32b',
         yellowtxt: '#F2A202',
+        red: '#EE0000'
       },
       fontFamily: {
         'rs-reg': ['RS-Reg', 'sans-serif'],

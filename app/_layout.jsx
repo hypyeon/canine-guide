@@ -86,6 +86,13 @@ export default function RootLayout() {
             headerRight: () => renderTitle('Guides for each life stage'),
           }}
         />
+        <Stack.Screen 
+          name="foods"
+          options={{
+            title: '',
+            headerRight: () => renderTitle('Safe and Unsafe Food for Dogs'),
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

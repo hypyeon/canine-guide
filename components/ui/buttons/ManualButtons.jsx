@@ -13,7 +13,7 @@ const data = [
   },
   {
     text: 'Safe & Unsafe Food for Dogs',
-    href: '/manual'
+    href: '/foods'
   },
   {
     text: 'Communicating with Dogs',

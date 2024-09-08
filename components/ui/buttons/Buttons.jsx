@@ -3,7 +3,7 @@ import React from 'react'
 import { Link } from 'expo-router'
 
 const Buttons = (props) => {
-  const { type, bgColor, src, text, txtColor, href, onShare, mb, imgPosition } = props;
+  const { type, bgColor, src, text, txtColor, onShare, mb, imgPosition, imgSize, handlePress } = props;
 
   const chooseType = () => {
     switch (type) {
@@ -23,75 +23,82 @@ const Buttons = (props) => {
   const renderContent = () => {
     if (type === 'start') {
       return (
-        <Link 
-          className='text-sage font-ruda-sb text-xl tracking-wide py-3 w-[56vw] text-center'
-          href={href}
+        <TouchableOpacity 
+          className='py-3 w-[56vw]'
+          onPress={handlePress}
         >
-          {text}
-        </Link>
+          <Text className="text-sage font-ruda-sb text-xl tracking-wide text-center">
+            {text}
+          </Text>
+        </TouchableOpacity>
       )
     }
     else if (type === 'landing') {
-      if (href) {
-        return (
-          <Link
-            href={href}
-          >
-            <View 
-              className='pt-[2.5vw] w-[24vw] flex justify-center items-center'
+      return (
+        <>
+          { onShare && (
+            <TouchableOpacity 
+              onPress={onShare}
             >
-              <Image source={src} className='w-[8vw] h-[8vw]' />
-            </View>
-          </Link>
-        )
-      } else {
-        return (
-          <View 
-            className='py-2 w-[24vw] flex justify-center items-center'
-          >
-            <Image source={src} className='w-[8vw] h-[8vw]' />
-          </View>
-        )
-      }
+              <View 
+                className='py-2 w-[24vw] flex justify-center items-center'
+              >
+                <Image source={src} className='w-[8vw] h-[8vw]' />
+              </View>
+            </TouchableOpacity>
+          )}
+          { handlePress && (
+            <TouchableOpacity
+              onPress={handlePress}
+            >
+              <View 
+                className='pt-[2.5vw] w-[24vw] flex justify-center items-center'
+              >
+                <Image source={src} className='w-[8vw] h-[8vw]' />
+              </View>
+            </TouchableOpacity>
+          )}
+        </>
+      )
     } else if (type === 'manual') {
       return (
-        <Link 
-          className='font-rs-reg text-xl text-black py-3 w-[76vw] text-center'
-          href={href}
+        <TouchableOpacity 
+          className='py-3 w-[76vw]'
+          onPress={handlePress}
         >
-          <Text>
+          <Text className="font-rs-reg text-xl text-black text-center">
             {text}
           </Text>
-        </Link>
+        </TouchableOpacity>
       )
     } else if (type === 'resource') {
       return (
-        <Link 
+        <TouchableOpacity 
           className="relative"
-          href={href}
+          onPress={handlePress}
         >
           <View className="relative py-3 w-56 flex justify-center items-center">
             <View className={`absolute ${imgPosition}`}>
               <Image 
                 source={src} 
+                className={`${imgSize}`}
               />
             </View>
-            <Text className={`relative font-rs-reg text-xl ${txtColor}`}>
+            <Text className={`relative font-rs-reg text-xl tracking-wide ${txtColor}`}>
               {text}
             </Text>
           </View>
-        </Link> 
+        </TouchableOpacity> 
       )
     }
   }
 
   return (
-    <TouchableOpacity 
+    <View 
       className={`${chooseType()} ${bgColor}`}
-      onPress={onShare ? onShare : null}
     >
       {renderContent()}
-    </TouchableOpacity>
+    </View>
   )
 }
 

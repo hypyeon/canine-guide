@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import DetailView from '../ui/views/DetailView'
-import Carousel from '../ui/carousel/Carousel'
-import PuppyPage from './PuppyPage'
-import AdultPage from './AdultPage'
-import SeniorPage from './SeniorPage'
+import DetailView from '../../ui/views/DetailView'
+import Carousel from '../../ui/carousel/Carousel'
+import PuppyPage from '../subs/PuppyPage'
+import AdultPage from '../subs/AdultPage'
+import SeniorPage from '../subs/SeniorPage'
 
 const GuidesPage = () => {
   const [ active, setActive ] = useState('Puppy');

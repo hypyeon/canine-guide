@@ -1,5 +1,5 @@
 import React from 'react'
-import DonationPage from '../components/pages/DonationPage'
+import DonationPage from '../components/pages/mains/DonationPage'
 
 const Donation = () => {
   return (

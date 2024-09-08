@@ -57,11 +57,17 @@ const Card = (props) => {
 
   const renderFoodContent = () => {
     return (
-      <>
-        <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-[14px]`}>{content[0]} {`\n\n`}</Text>
-        <Text className="w-[68vw] font-ruda-b text-red">Potential effects{`\n`}</Text>
-        <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-1`}>{content[1]}</Text>
-      </>
+      <View className={`${index}`}>
+        <View>
+          <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-[14px]`}>{content[0]}</Text>
+        </View>
+        <View className="mb-[3px]">
+          <Text className="w-[68vw] font-ruda-b text-red">Potential effects</Text>
+        </View>
+        <View>
+          <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-1`}>{content[1]}</Text>
+        </View>
+      </View>
     )
   }
 

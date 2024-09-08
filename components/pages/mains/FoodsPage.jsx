@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
-import DetailView from '../ui/views/DetailView'
-import Carousel from '../ui/carousel/Carousel'
-import UnsafePage from './UnsafePage'
-import SafePage from './SafePage'
+import DetailView from '../../ui/views/DetailView'
+import Carousel from '../../ui/carousel/Carousel'
+import UnsafePage from '../subs/UnsafePage'
+import SafePage from '../subs/SafePage'
 
 const FoodsPage = () => {
   const [ active, setActive ] = useState('Unsafe');

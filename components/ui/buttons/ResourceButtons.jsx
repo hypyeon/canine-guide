@@ -1,4 +1,5 @@
 import { View } from 'react-native'
+import { router } from 'expo-router'
 import React from 'react'
 
 import Buttons from './Buttons'
@@ -10,31 +11,34 @@ import shop from '../../../assets/images/btn-icon-online.png'
 const data = [
   {
     text: 'Veterinarian',
-    href: '/resource',
+    to: '/resource',
     txtColor: 'text-sage',
     src: vet,
-    position: 'top-1 right-0'
+    position: 'top-0 right-0'
   },
   {
     text: 'Dog Training',
-    href: '/resource',
+    to: '/resource',
     txtColor: 'text-sage',
     src: train,
-    position: 'bottom-0 left-0'
+    position: 'bottom-1 left-0',
+    size: 'w-[9vw] h-[9vw]'
   },
   {
     text: 'Nearby Stores',
-    href: '/resource',
+    to: '/resource',
     txtColor: 'text-yellow',
     src: store,
-    position: 'bottom-1 right-0'
+    position: 'bottom-1 right-0',
+    size: 'w-[6vw]'
   },
   {
     text: 'Online Stores',
-    href: '/resource',
+    to: '/resource',
     txtColor: 'text-yellow',
     src: shop,
-    position: 'top-2 left-0'
+    position: 'top-1 left-0',
+    size: 'w-[5vw]'
   }
 ]
 
@@ -46,7 +50,7 @@ const ResourceButtons = () => {
           key={index}
           type='resource'
           text={item.text}
-          href={item.href}
+          handlePress={() => router.push(item.to)}
           txtColor={item.txtColor}
           mb={index === data.length - 1 ? 'mb-0' : 'mb-4'}
           src={item.src}

@@ -1,27 +1,28 @@
 import { View } from 'react-native'
 import React from 'react'
 import Buttons from './Buttons'
+import { router } from 'expo-router'
 
 const data = [
   {
     text: 'Pre-adoption Manual',
-    href: '/manual'
+    to: '/manual'
   },
   {
     text: 'Guides for Each Life Stage',
-    href: '/guides'
+    to: '/guides'
   },
   {
     text: 'Safe & Unsafe Food for Dogs',
-    href: '/foods'
+    to: '/foods'
   },
   {
     text: 'Communicating with Dogs',
-    href: '/communicating'
+    to: '/communicating'
   },
   {
     text: 'Pet Owner Essentials',
-    href: '/essentials'
+    to: '/essentials'
   }
 ]
 
@@ -33,7 +34,7 @@ const ManualButtons = () => {
           key={index}
           type='manual'
           text={item.text}
-          href={item.href}
+          handlePress={() => router.push(item.to)}
           mb={index === data.length - 1 ? 'mb-12' : 'mb-4'}
         />
       ))}

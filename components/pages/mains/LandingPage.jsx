@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, Image, View, Share, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
-import { Link } from 'expo-router';
+import { Link, router } from 'expo-router';
 
 import CenteredView from '../../ui/views/CenteredView';
 import Buttons from '../../ui/buttons/Buttons';
@@ -58,7 +58,7 @@ export default function LandingPage() {
         <Buttons 
           type='start'
           text='GET STARTED'
-          href='/menu'
+          handlePress={() => router.push('/menu')}
         />
         <View className='flex flex-row w-[52vw] justify-between'>
           <Buttons 
@@ -71,7 +71,7 @@ export default function LandingPage() {
             type='landing'
             bgColor='bg-sage'
             src={donate}
-            href='/donation'
+            handlePress={() => router.push('/donation')}
           />
         </View>
       </View>

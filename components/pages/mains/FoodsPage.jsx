@@ -5,7 +5,9 @@ import UnsafePage from '../subs/UnsafePage'
 import SafePage from '../subs/SafePage'
 
 const FoodsPage = () => {
-  const [ active, setActive ] = useState('Unsafe');
+  const pages = ['Unsafe', 'Safe'];
+
+  const [ active, setActive ] = useState(pages[0]);
 
   const handleActive = (title) => {
     setActive(title);
@@ -14,12 +16,12 @@ const FoodsPage = () => {
   return (
     <DetailView bgColor="bg-sage" size="fit-content">
       <Carousel 
-        titles={['Unsafe', 'Safe']}
+        titles={pages}
         onSelect={handleActive}
         active={active}
       />
-      {active === 'Unsafe' && <UnsafePage />}
-      {active === 'Safe' && <SafePage />}
+      {active === pages[0] && <UnsafePage />}
+      {active === pages[1] && <SafePage />}
     </DetailView>
   )
 }

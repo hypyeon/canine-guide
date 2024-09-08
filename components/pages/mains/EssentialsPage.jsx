@@ -1,9 +1,13 @@
 import React, { useState } from 'react'
 import DetailView from '../../ui/views/DetailView'
 import Carousel from '../../ui/carousel/Carousel'
+import AppsPage from '../subs/AppsPage'
+import ToolsPage from '../subs/ToolsPage'
 
 const EssentialsPage = () => {
-  const [ active, setActive ] = useState('Useful Apps');
+  const pages = ['Useful Apps', 'Pet Care Tools'];
+
+  const [ active, setActive ] = useState(pages[0]);
 
   const handleActive = (title) => {
     setActive(title);
@@ -12,12 +16,12 @@ const EssentialsPage = () => {
   return (
     <DetailView bgColor="bg-sage" size="fit-content">
       <Carousel 
-        titles={['Useful Apps', 'Pet Care Tools']}
+        titles={pages}
         onSelect={handleActive}
         active={active}
       />
-      {/* {active === 'Unsafe' && <UnsafePage />}
-      {active === 'Safe' && <SafePage />} */}
+      {active === pages[0] && <AppsPage />}
+      {active === pages[1] && <ToolsPage />}
     </DetailView>
   )
 

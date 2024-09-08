@@ -2,7 +2,10 @@ import React from 'react'
 import DetailView from '../../ui/views/DetailView'
 import Note from '../../ui/notes/Note'
 import noteData from '../../data/NoteData'
-import DonationCards from '../../ui/cards/DonationCards'
+import WebsitesCards from '../../ui/cards/WebsitesCards'
+import CardData from '../../data/CardData'
+
+const data = CardData.find(data => data.page === 'donation').list;
 
 const note = noteData.find(note => note.page === 'donation');
 const topNote = note.list.find(n => n.position === 'top');
@@ -15,7 +18,7 @@ const DonationPage = () => {
         position="top"
         content={topNote.content}
       />
-      <DonationCards />
+      <WebsitesCards data={data} />
       <Note 
         position="bottom"
         content={bottomNote.content}

@@ -97,6 +97,24 @@ const noteData = [
         content: `Avoiding these "Don'ts" helps foster a positive, trusting relationship with your dog, promoting their well-being and ensuring a happy, well-adjusted companion.`
       }
     ]
+  },
+  {
+    page: 'apps',
+    list: [
+      {
+        position: 'bottom',
+        content: `There are countless apps being developed to help dog owners learn and care for their pets more effectively. While we've highlighted some of the best, we encourage you to explore and research on your own to find the apps that best meet your and your dog's unique needs.`
+      }
+    ]
+  },
+  {
+    page: 'tools',
+    list: [
+      {
+        position: 'bottom',
+        content: `Please note that the products recommended here are based on independent research and personal experience, with no sponsorships or endorsements from the brands mentioned. These recommendations are provided purely to help you make informed decisions for your pet's care.`
+      }
+    ]
   }
 ];
 

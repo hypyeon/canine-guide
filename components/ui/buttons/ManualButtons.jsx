@@ -21,7 +21,7 @@ const data = [
   },
   {
     text: 'Pet Owner Essentials',
-    href: '/manual'
+    href: '/essentials'
   }
 ]
 

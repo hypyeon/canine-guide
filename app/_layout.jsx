@@ -100,6 +100,13 @@ export default function RootLayout() {
             headerRight: () => renderTitle('Communicating with Dogs'),
           }}
         />
+        <Stack.Screen 
+          name="essentials"
+          options={{
+            title: '',
+            headerRight: () => renderTitle('Pet Owner Essentials'),
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

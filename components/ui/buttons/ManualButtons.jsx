@@ -17,7 +17,7 @@ const data = [
   },
   {
     text: 'Communicating with Dogs',
-    href: '/manual'
+    href: '/communicating'
   },
   {
     text: 'Pet Owner Essentials',

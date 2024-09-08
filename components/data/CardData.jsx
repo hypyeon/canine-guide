@@ -361,6 +361,413 @@ const CardData = [
         ]
       }
     ]
+  },
+  {
+    page: 'language',
+    list: [
+      {
+        title: 'Body Language: Tail',
+        content: `[list][list][list][list][list][list][list][list]`,
+        list: [
+          {
+            subtitle: 'Tail Wagging in a Circular Motion',
+            elements: [
+              'Joy or excitement',
+              'A tail wagging in a circular motion often means your dog is extremely happy or excited, frequently seen during greetings or playtime.'
+            ]
+          },
+          {
+            subtitle: 'Fast, Wide Wagging',
+            elements: [
+              'Excitement or eagerness',
+              'A rapidly wagging tail with wide, sweeping motions often shows that your dog is very excited or eager.'
+            ]
+          },
+          {
+            subtitle: 'Tail Held High and Wagging',
+            elements: [
+              'Confidence or enthusiasm',
+              'A tail held high and wagging energetically typically reflects confidence, happiness, or strong interest.'
+            ]
+          },
+          {
+            subtitle: 'Relaxed, Wagging Tail',
+            elements: [
+              'Happiness or contentment',
+              'A tail that wags slowly and comfortably with a relaxed body usually means your dog is content and at ease.'
+            ]
+          },
+          {
+            subtitle: 'Tail Wagging Slowly with Low Position',
+            elements: [
+              'Uncertainty or submissiveness',
+              'A slow wagging tail held low, often combined with other submissive signals, may show that your dog is feeling unsure or submissive.'
+            ]
+          },
+          {
+            subtitle: 'Tail Wagging with Stiff Body',
+            elements: [
+              'Nervousness or anxiety',
+              'If the tail is wagging but the body is stiff, it may signal that your dog is excited but also feeling anxious or unsure.'
+            ]
+          },
+          {
+            subtitle: 'Tail Tucked Between Legs',
+            elements: [
+              'Fear or submission',
+              'A tail tucked tightly between the legs can indicate fear, anxiety, or submissive behavior. It’s a sign your dog is feeling threatened or uncomfortable.'
+            ]
+          },
+          {
+            subtitle: 'Tail Held Rigid and Not Wagging',
+            elements: [
+              'Alertness or potential aggression',
+              'A stiff, upright tail that is not wagging may indicate that your dog is on high alert, defensive, or potentially aggressive.'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Body Language: Ears',
+        content: `[list][list][list]`,
+        list: [
+          {
+            subtitle: 'Ears Relaxed and Slightly Forward',
+            elements: [
+              'Calm and content',
+              'When your dog’s ears are relaxed and slightly forward, it often means they are in a state of calm and comfort, feeling secure and at ease.'
+            ]
+          },
+          {
+            subtitle: 'Ears Up and Forward',
+            elements: [
+              'Curiosity or attentiveness',
+              'Ears held up and facing forward show your dog is interested in something.'
+            ]
+          },
+          {
+            subtitle: 'Ears Back',
+            elements: [
+              'Fear, submission, or discomfort',
+              'Ears pulled back against the head can signal that your dog feels threatened or is unsure.'
+            ]
+          },
+        ]
+      },
+      {
+        title: 'Body Language: Others',
+        content: `[list][list][list]`,
+        list: [
+          {
+            subtitle: 'Relaxed Body and Panting',
+            elements: [
+              'Contentment or relaxation',
+              'A relaxed stance with loose muscles and gentle panting usually means your dog is comfortable.'
+            ]
+          },
+          {
+            subtitle: 'Paw Lifting',
+            elements: [
+              'Uncertainty or hesitation',
+              'A lifted paw can show that your dog is unsure or anxious.'
+            ]
+          },
+          {
+            subtitle: 'Yawning',
+            elements: [
+              'Stress or boredom',
+              'Dogs may yawn when they are stressed, anxious, or simply bored.'
+            ]
+          },
+        ]
+      },
+      {
+        title: 'Facial Expressions',
+        content: `[list][list][list][list]`,
+        list: [
+          {
+            subtitle: 'Soft Eyes',
+            elements: [
+              'Trust and affection',
+              'Relaxed eyes and a soft gaze generally mean your dog is comfortable and trusts you.'
+            ]
+          },
+          {
+            subtitle: 'Wide Eyes or Showing White',
+            elements: [
+              'Fear or anxiety',
+              'If your dog’s eyes are wide open or showing the whites, it may be feeling threatened or scared.'
+            ]
+          },
+          {
+            subtitle: 'Licking Lips',
+            elements: [
+              'Nervousness or submission',
+              'Licking the lips can be a sign of stress or that your dog is trying to calm themselves.'
+            ]
+          },
+          {
+            subtitle: 'Relaxed Mouth',
+            elements: [
+              'Contentment',
+              'A relaxed, open mouth with a gentle expression often means your dog is happy and relaxed.'
+            ]
+          },
+        ]
+      },
+      {
+        title: 'Vocalizations',
+        content: `[list][list][list]`,
+        list: [
+          {
+            subtitle: 'Barking',
+            elements: [
+              'Alertness, excitement, or seeking attention',
+              'The tone and frequency can vary—playful barks, alert barks, or bark warnings can all have different meanings.'
+            ]
+          },
+          {
+            subtitle: 'Whining',
+            elements: [
+              'Distress, discomfort, or desire for attention',
+              'Whining can signal that your dog needs something or is feeling anxious.'
+            ]
+          },
+          {
+            subtitle: 'Growling',
+            elements: [
+              'Warning or discomfort',
+              'Growling can be a sign of discomfort, fear, or a warning that your dog wants to be left alone.'
+            ]
+          },
+        ]
+      },
+      {
+        title: 'Sleeping Positions',
+        content: `[list][list][list][list][list][list]`,
+        list: [
+          {
+            subtitle: 'Curled Up in a Ball',
+            elements: [
+              'Comfort and security',
+              'This position helps dogs conserve body heat and protect their vital organs. It often signifies that your dog feels safe and secure in their environment.'
+            ]
+          },
+          {
+            subtitle: 'On Their Side with Legs Extended',
+            elements: [
+              'Relaxation and trust',
+              'When a dog sleeps on their side with their legs stretched out, it shows they are completely relaxed and feel secure in their surroundings. It’s a sign of deep comfort and trust.'
+            ]
+          },
+          {
+            subtitle: 'On Their Back with Belly Exposed',
+            elements: [
+              'Ultimate trust and comfort',
+              'Sleeping on their back with their belly exposed is a vulnerable position that indicates your dog feels extremely safe and comfortable in their environment. It also helps them cool down.'
+            ]
+          },
+          {
+            subtitle: 'Sleeping with Their Head on Their Paws',
+            elements: [
+              'Sleepiness or comfort',
+              'This position can indicate that your dog is in a state of deep relaxation or sleepiness. It’s a comforting way for them to rest while keeping an eye on their surroundings.'
+            ]
+          },
+          {
+            subtitle: 'Napping with a Favorite Toy or Blanket',
+            elements: [
+              'Security and affection',
+              'Holding or snuggling with a favorite toy or blanket while sleeping indicates that your dog finds comfort and security in the item. It often represents a need for reassurance and emotional comfort.'
+            ]
+          },
+          {
+            subtitle: 'In a Tucked Position',
+            elements: [
+              'This position can indicate that your dog is feeling a bit cautious or cold. It’s a way to keep themselves warm and secure while resting.'
+            ]
+          },
+        ]
+      }
+    ]
+  },
+  {
+    page: 'communicating',
+    list: [
+      {
+        title: 'Voice Communication',
+        content: `[list][list]`,
+        list: [
+          {
+            subtitle: 'Use clear and Consistent Commands',
+            elements: [
+              'Stick to simple, one-word commands like “sit,” “stay,” or “come.” Consistency in the words you use helps your dog understand what you’re asking for.'
+            ]
+          },
+          {
+            subtitle: 'Use a Firm but Calm Tone',
+            elements: [
+              'Speak in a firm, calm tone to convey authority without raising your voice. Dogs respond better to clear, controlled communication rather than shouting.'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Body Language',
+        content: `Dogs are highly attuned to your body language. Use confident, clear gestures to reinforce commands. \n\n[list][list][list][list][list]`,
+        list: [
+          {
+            subtitle: 'Hand Signals',
+            elements: [
+              'Pairing verbal commands with hand signals can enhance communication. Over time, your dog may even respond to hand signals alone, especially in noisy environments. For example, raise your hand for “sit” or point for “come.”'
+            ]
+          },
+          {
+            subtitle: 'Respect Their Space',
+            elements: [
+              'Give your dog space when they need it. Crowding or approaching too quickly can make them feel threatened. Allow your dog to come to you when they’re ready for interaction.'
+            ]
+          },
+          {
+            subtitle: 'Touch and Physical Affection',
+            elements: [
+              'Dogs often respond well to touch, such as gentle petting or scratching. This can reinforce positive behavior and strengthen your bond, but be mindful of your dog’s preferences and boundaries.'
+            ]
+          },
+          {
+            subtitle: 'Maintain Eye Contact',
+            elements: [
+              'Making eye contact can help build trust and reinforce your connection. However, avoid prolonged eye contact if your dog seems uncomfortable, as some dogs may perceive it as a challenge.'
+            ]
+          },
+          {
+            subtitle: 'Use Your Own Energy',
+            elements: [
+              'Dogs are sensitive to human emotions and energy levels. Stay calm and composed, especially during training sessions or when correcting unwanted behavior. Your energy can influence how your dog responds to you.'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Positive Reinforcement and Routine',
+        content: `[list][list][list]`,
+        list: [
+          {
+            subtitle: 'Reward Good Behavior',
+            elements: [
+              'Positive reinforcement, such as treats, praise, or petting, helps your dog associate good behavior with positive outcomes. Immediate rewards are most effective.'
+            ]
+          },
+          {
+            subtitle: 'Establish Routines',
+            elements: [
+              'Dogs thrive on routine. Establishing consistent feeding, walking, and training times helps them understand what to expect, reducing anxiety and improving overall communication.'
+            ]
+          },
+          {
+            subtitle: 'Play and Engage',
+            elements: [
+              'Playtime is a great way to communicate and build a positive relationship with your dog. Engaging in games like fetch or tug-of-war also helps reinforce commands in a fun, interactive way.'
+            ]
+          },
+        ]
+      },
+      {
+        title: 'Patience and Consistency',
+        content: `Consistency in your interactions helps your dog learn and understand your expectations. Patience is key, as it may take time for your dog to fully grasp new commands or behaviors.`,
+      }
+    ]
+  },
+  {
+    page: 'donts',
+    list: [
+      {
+        title: 'During Communication and Training',
+        content: `[list][list][list][list]`,
+        list: [
+          {
+            subtitle: 'Don’t Yell or Shout',
+            elements: [
+              'Yelling can cause fear, anxiety, and confusion in dogs. It can damage trust and make your dog fearful of you, hindering effective communication and training.'
+            ]
+          },
+          {
+            subtitle: 'Don’t Use Physical Punishment',
+            elements: [
+              'Physical punishment can lead to aggression, fear, and a breakdown in the relationship. It can make your dog distrustful, anxious, and potentially reactive or aggressive towards you or others.'
+            ]
+          },
+          {
+            subtitle: 'Don’t Overwhelm with Too Many or Repetitive Commands',
+            elements: [
+              'Bombarding your dog with too many commands at once can overwhelm them, causing confusion and frustration. It can reduce their ability to learn effectively and weaken your communication.',
+              'Repeating commands too often can confuse your dog. Say the command once and wait for a response before repeating.'
+            ]
+          },
+          {
+            subtitle: 'Don’t Ignore Warning Signs',
+            elements: [
+              'Ignoring signs of discomfort or stress, such as growling or avoiding eye contact, can escalate to aggressive behavior. This can strain your relationship and lead to dangerous situations.'
+            ]
+          }
+        ]
+      },
+      {
+        title: 'For Emotional and Physical Well-being',
+        content: `[list][list][list][list]`,
+        list: [
+          {
+            subtitle: `Don’t Force Interaction`,
+            elements: [
+              `Forcing your dog to interact with people or other animals when they are uncomfortable can increase anxiety and stress. It can result in fear-based aggression and damage your dog's confidence and trust in you.`
+            ]
+          },
+          {
+            subtitle: `Don’t Leave Your Dog Alone for Extended Periods`,
+            elements: [
+              `Prolonged isolation can lead to separation anxiety, depression, and destructive behavior. It can make your dog feel abandoned, damaging your bond and leading to behavioral problems.`
+            ]
+          },
+          {
+            subtitle: `Don’t Neglect Regular Exercise and Mental Stimulation`,
+            elements: [
+              `A lack of physical exercise and mental stimulation can lead to boredom, destructive behavior, and obesity. It can also cause frustration, anxiety, and negatively affect your dog’s overall well-being.`
+            ]
+          },
+          {
+            subtitle: `Don’t Compare Your Dog to Others`,
+            elements: [
+              `Comparing your dog’s behavior or abilities to other dogs can create unrealistic expectations and lead to frustration. This can make your dog feel inadequate and strain your relationship.`
+            ]
+          }
+        ]
+      },
+      {
+        title: 'Health and Behavioral Management',
+        content: `[list][list][list]`,
+        list: [
+          {
+            subtitle: `Don’t Neglect Health Care Needs and Behaviorl Changes`,
+            elements: [
+              `Regular vet check-ups are essential for your dog’s health and well-being. Routine vaccinations, parasite prevention, and dental care are crucial to maintaining their overall health.`,
+              `Changes in your dog’s behavior, appetite, energy levels, or bathroom habits can indicate underlying health issues. Consult your vet if you notice any unusual or persistent changes.`
+            ]
+          },
+          {
+            subtitle: `Don’t Encourage Bad Behavior`,
+            elements: [
+              `Laughing at or rewarding undesirable behavior, like jumping on people or barking excessively, can reinforce bad habits. It can make behavior problems worse and harder to correct later.`
+            ]
+          },
+          {
+            subtitle: `Don’t Use Your Dog as a Scapegoat`,
+            elements: [
+              `Blaming your dog for your frustrations can lead to resentment and damage the trust in your relationship. It can cause emotional distress for your dog and create a negative environment.`
+            ]
+          }
+        ]
+      },
+    ]
   }
 ]
 

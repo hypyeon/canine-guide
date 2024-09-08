@@ -93,6 +93,13 @@ export default function RootLayout() {
             headerRight: () => renderTitle('Safe and Unsafe Food for Dogs'),
           }}
         />
+        <Stack.Screen 
+          name="communicating"
+          options={{
+            title: '',
+            headerRight: () => renderTitle('Communicating with Dogs'),
+          }}
+        />
       </Stack>
     </ThemeProvider>
   );

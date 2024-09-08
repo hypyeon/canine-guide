@@ -66,6 +66,37 @@ const noteData = [
         content: `While not all human foods are suitable for dogs, many can be both safe and nutritious when given in moderation. \n\nHowever, even foods known to be safe for most dogs may not be safe for all, as individual dogs can have allergies or sensitivities. Always monitor your dog closely for any signs of allergic reactions or digestive issues when introducing a new food. It's essential to consult with your veterinarian to ensure these foods are appropriate for your dog’s specific diet  and health needs.`
       }
     ]
+  },
+  {
+    page: 'language',
+    list: [
+      {
+        position: 'top',
+        content: `Dogs are always trying to communicate with us through their body language, facial expressions, and vocalizations. Understanding these cues can strengthen your bond and improve your interactions.`
+      },
+      {
+        position: 'bottom',
+        content: `While these descriptions of dog body language and sleeping positions provide useful insights, it's important to remember that interpreting your dog's behavior can sometimes be misleading. \n\nDogs may exhibit different signals based on individual personality, breed, and context. To get a more accurate understanding, consider watching relevant videos or conducting further research on canine behavior. Consulting with a professional dog trainer or behaviorist can also offer personalized guidance and help you better interpret your dog's unique expressions and actions.`
+      }
+    ]
+  },
+  {
+    page: 'communicating',
+    list: [
+      {
+        position: 'top',
+        content: `Effective communication with your dog involves a combination of clear commands, positive reinforcement, and understanding their body language. Tailoring your approach to your dog’s individual needs and personality will lead to a stronger, more trusting relationship.`
+      }
+    ]
+  },
+  {
+    page: 'donts',
+    list: [
+      {
+        position: 'top',
+        content: `Avoiding these "Don'ts" helps foster a positive, trusting relationship with your dog, promoting their well-being and ensuring a happy, well-adjusted companion.`
+      }
+    ]
   }
 ];
 

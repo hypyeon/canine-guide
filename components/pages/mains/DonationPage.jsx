@@ -1,8 +1,8 @@
 import React from 'react'
-import DetailView from '../ui/views/DetailView'
-import Note from '../ui/notes/Note'
-import noteData from '../data/NoteData'
-import DonationCards from '../ui/cards/DonationCards'
+import DetailView from '../../ui/views/DetailView'
+import Note from '../../ui/notes/Note'
+import noteData from '../../data/NoteData'
+import DonationCards from '../../ui/cards/DonationCards'
 
 const note = noteData.find(note => note.page === 'donation');
 const topNote = note.list.find(n => n.position === 'top');

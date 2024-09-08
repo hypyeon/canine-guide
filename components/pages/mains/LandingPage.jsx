@@ -3,14 +3,15 @@ import { Text, Image, View, Share, Alert } from 'react-native';
 import { StatusBar } from 'expo-status-bar';
 import { Link } from 'expo-router';
 
-import CenteredView from '../ui/views/CenteredView';
-import cover from '../../assets/images/landing-human-pet.png';
-import share from '../../assets/images/btn-share.png';
-import donate from '../../assets/images/btn-donate.png';
-import Buttons from '../ui/buttons/Buttons';
-import bone from '../../assets/images/bg-icon-bone.png';
-import bowl from '../../assets/images/bg-icon-bowl.png';
-import dog from '../../assets/images/bg-icon-dog.png';
+import CenteredView from '../../ui/views/CenteredView';
+import Buttons from '../../ui/buttons/Buttons';
+
+import cover from '../../../assets/images/landing-human-pet.png';
+import share from '../../../assets/images/btn-share.png';
+import donate from '../../../assets/images/btn-donate.png';
+import bone from '../../../assets/images/bg-icon-bone.png';
+import bowl from '../../../assets/images/bg-icon-bowl.png';
+import dog from '../../../assets/images/bg-icon-dog.png';
 
 export default function LandingPage() {
 

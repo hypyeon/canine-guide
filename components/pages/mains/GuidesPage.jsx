@@ -6,7 +6,9 @@ import AdultPage from '../subs/AdultPage'
 import SeniorPage from '../subs/SeniorPage'
 
 const GuidesPage = () => {
-  const [ active, setActive ] = useState('Puppy');
+  const pages = ['Puppy', 'Adult', 'Senior'];
+  
+  const [ active, setActive ] = useState(pages[0]);
 
   const handleActive = (title) => {
     setActive(title);
@@ -15,13 +17,13 @@ const GuidesPage = () => {
   return (
     <DetailView bgColor="bg-sage" size="fit-content">
       <Carousel 
-        titles={['Puppy', 'Adult', 'Senior']}
+        titles={pages}
         onSelect={handleActive}
         active={active}
       />
-      {active === 'Puppy' && <PuppyPage />}
-      {active === 'Adult' && <AdultPage />}
-      {active === 'Senior' && <SeniorPage />}
+      {active === pages[0] && <PuppyPage />}
+      {active === pages[1] && <AdultPage />}
+      {active === pages[2] && <SeniorPage />}
     </DetailView>
   )
 }

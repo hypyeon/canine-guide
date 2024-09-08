@@ -1,6 +1,13 @@
 import hs from '../../assets/images/logo-donate-hs.png'
 import aspca from '../../assets/images/logo-donate-aspca.png'
 import apollo from '../../assets/images/logo-donate-apollo.png'
+import sniffspot from '../../assets/images/logo-app-sniffspot.png'
+import rover from '../../assets/images/logo-app-rover.png'
+import firstaid from '../../assets/images/logo-app-first-aid.png'
+import netflix from '../../assets/images/logo-app-netflix.png'
+import wp from '../../assets/images/logo-tool-wp.png'
+import byte from '../../assets/images/logo-tool-byte.png'
+import pup from '../../assets/images/logo-tool-pup.png'
 
 const CardData = [
   {
@@ -768,7 +775,76 @@ const CardData = [
         ]
       },
     ]
-  }
+  },
+  {
+    page: 'apps',
+    list: [
+      {
+        title: '"Sniffspot"',
+        src: sniffspot,
+        href: 'https://www.sniffspot.com/',
+        content: 'Inspired by the idea of making things better for dogs, David put up a simple website and started crowdsourcing yards. Now Sniffspot operates in all 50 states and all around the world.',
+        apps: [
+          'https://apps.apple.com/us/app/sniffspot-private-dog-parks/id1437699295?l=ko',
+          'https://play.google.com/store/apps/details?id=com.sniffspot&pli=1'
+        ]
+      },
+      {
+        title: '"Rover"',
+        src: rover,
+        href: 'https://www.rover.com/?adwordslocation=9197773',
+        content: 'Founded in 2011, the Rover app and website connect dog and cat parents with loving pet sitters and dog walkers in neighborhoods across the US, Canada, the UK, and Europe.',
+        apps: [
+          'https://itunes.apple.com/us/app/rover.com/id547320928?mt=8&uo=4',
+          'http://play.google.com/store/apps/details?id=com.rover.android&gl=us&hl=en'
+        ]
+      },
+      {
+        title: '"Pet First Aid" by Red Cross',
+        src: firstaid,
+        href: 'https://www.redcross.org/about-us/news-and-events/news/2023/pet-first-aid-awareness-app.html',
+        content: 'The FREE Pet First Aid app puts veterinary advice for emergencies as well as everyday pet care in the palm of your hand. With videos, interactive quizzes and simple step-by-step advice it’s never been easier to know pet first aid.',
+        apps: [
+          'https://itunes.apple.com/us/app/pet-first-aid-by-american/id780415389?ls=1&mt=8',
+          'https://play.google.com/store/apps/details?id=com.cube.arc.pfa'
+        ]
+      },
+      {
+        title: '"Netflix"',
+        src: netflix,
+        href: 'https://www.netflix.com/',
+        content: 'Netflix has many documentaries about dogs, including ones that explore their thoughts, intelligence, and athletic abilities. We recommend you to watch “Inside the Mind of a Dog”, “The Hidden Lives of Pets”, “Canine Intervention”, “Dogs” and to find out more.',
+        apps: [
+          'https://itunes.apple.com/us/app/pet-first-aid-by-american/id780415389?ls=1&mt=8',
+          'https://play.google.com/store/apps/details?id=com.cube.arc.pfa'
+        ]
+      },
+    ]
+  },
+  {
+    page: 'tools',
+    list: [
+      {
+        title: '"Wisdom Panel" DNA Test Kit',
+        src: wp,
+        href: 'https://www.wisdompanel.com/en-us/dog-dna-tests',
+        content: `... after 20+ years of research, genotyping, and our own pet parenting, we've developed tests that deliver the knowledge you need to actually know your pet as the complex being they are.`,
+      },
+      {
+        title: '"ByteTag" Scannable Pet Tag',
+        src: byte,
+        href: 'https://shop.bytetag.co/?tw_source=google&tw_adid=688823468766&tw_campaign=17395432004',
+        content: `ByteTag is a scannable pet tag containing all of your pets important information conveniently in one profile. If someone scans your pet's ByteTag, they can share their current location with the click of a button.`,
+      },
+      {
+        title: '"PupPod" Interactive Dog Game',
+        src: pup,
+        href: 'https://puppod.com/',
+        content: `The positive reinforcement enrichment game that reduces anxiety and tires dogs out.`,
+      },
+    ]
+  },
+
 ]
 
 export default CardData

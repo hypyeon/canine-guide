@@ -2,7 +2,7 @@ import { View } from 'react-native'
 import React from 'react'
 import noteData from '../../data/NoteData';
 import Note from '../../ui/notes/Note';
-import LanguageCards from '../../ui/cards/CommunicatingCards';
+import CommunicatingCards from '../../ui/cards/CommunicatingCards';
 import CardData from '../../data/CardData';
 
 const note = noteData.find(note => note.page === 'language');
@@ -17,7 +17,7 @@ const LanguagePage = () => {
         position="top"
         content={topNote.content}
       />
-      <LanguageCards data={data} />
+      <CommunicatingCards data={data} />
       <Note 
         position="bottom"
         content={bottomNote.content}

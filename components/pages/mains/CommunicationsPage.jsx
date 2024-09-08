@@ -6,7 +6,9 @@ import CommunicatingPage from '../subs/CommunicatingPage'
 import DontsPage from '../subs/DontsPage'
 
 const CommunicationsPage = () => {
-  const [ active, setActive ] = useState("Dog's Language");
+  const pages = ["Dog's Language", "Communicating", "Don'ts"];
+
+  const [ active, setActive ] = useState(pages[0]);
 
   const handleActive = (title) => {
     setActive(title);
@@ -15,14 +17,14 @@ const CommunicationsPage = () => {
   return (
     <DetailView bgColor="bg-sage" size="fit-content">
       <Carousel 
-        titles={["Dog's Language", "Communicating", "Don'ts"]}
+        titles={pages}
         onSelect={handleActive}
         active={active}
         width="116%"
       />
-      {active === "Dog's Language" && <LanguagePage />}
-      {active === "Communicating" && <CommunicatingPage />}
-      {active === "Don'ts" && <DontsPage />}
+      {active === pages[0] && <LanguagePage />}
+      {active === pages[1] && <CommunicatingPage />}
+      {active === pages[2] && <DontsPage />}
     </DetailView>
   )
 }

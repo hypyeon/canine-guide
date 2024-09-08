@@ -1,11 +1,14 @@
-import { View, Text } from 'react-native'
+import { View, Linking } from 'react-native'
 import React from 'react'
 import Card from './Card'
-import CardData from '../../data/CardData'
 
-const data = CardData.find(data => data.page === 'donation').list;
+const AppsCards = (props) => {
+  const { data } = props;
 
-const DonationCards = () => {
+  const openLink = (link) => {
+    Linking.openURL(link)
+  }
+
   return (
     <View>
       {data.map((item, index) => (
@@ -17,10 +20,13 @@ const DonationCards = () => {
           href={item.href}
           content={item.content}
           mb={index === data.length - 1 ? 'mb-8' : 'mb-6'}
+          apps={item.apps}
+          openIos={() => openLink(item.apps[0])}
+          openAndroid={() => openLink(item.apps[1])}
         />
       ))}
     </View>
   )
 }
 
-export default DonationCards
+export default AppsCards

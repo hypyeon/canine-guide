@@ -94,38 +94,38 @@ const Card = (props) => {
             />
           </View>
         )
-      } else if (part === '[checklist]' && checklist[checklistIndex]) {
-        const current = checklist[checklistIndex];
-        checklistIndex++;
+      // } else if (part === '[checklist]' && checklist[checklistIndex]) {
+      //   const current = checklist[checklistIndex];
+      //   checklistIndex++;
 
-        const [ isChecked, setIsChecked ] = React.useState(false);
+      //   const [ isChecked, setIsChecked ] = React.useState(false);
 
-        const handleCheck = () => {
-          setIsChecked(!isChecked);
-        }
+      //   const handleCheck = () => {
+      //     setIsChecked(!isChecked);
+      //   }
 
-        const renderColor = (color) => {
-          switch (color) {
-            case 'yellow':
-              return '#f7b32b';
-            case 'sage':
-              return '#a9e5bb';
-            default:
-              return;
-          }
-        }
+      //   const renderColor = (color) => {
+      //     switch (color) {
+      //       case 'yellow':
+      //         return '#f7b32b';
+      //       case 'sage':
+      //         return '#a9e5bb';
+      //       default:
+      //         return;
+      //     }
+      //   }
 
-        return (
-          <View key={index} className="pb-1">
-            <Checkbox 
-              key={`checklist-${index}`} 
-              text={current.text}
-              color={renderColor(current.color)}
-              isChecked={isChecked}
-              handleCheck={handleCheck}
-            />
-          </View>
-        )
+      //   return (
+      //     <View key={index} className="pb-1">
+      //       <Checkbox 
+      //         key={`checklist-${index}`} 
+      //         text={current.text}
+      //         color={renderColor(current.color)}
+      //         isChecked={isChecked}
+      //         handleCheck={handleCheck}
+      //       />
+      //     </View>
+      //   )
       } else {
         return (
           <Text 

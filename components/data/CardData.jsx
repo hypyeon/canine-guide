@@ -9,8 +9,9 @@ import wp from '../../assets/images/logo-tool-wp.png'
 import byte from '../../assets/images/logo-tool-byte.png'
 import pup from '../../assets/images/logo-tool-pup.png'
 
-import { Text, View, TouchableOpacity } from 'react-native'
-import { router } from 'expo-router'
+import { Text, View } from 'react-native'
+import { Link, router } from 'expo-router'
+import Checkbox from '../ui/checkbox/Checkbox'
 
 const CardText = (props) => {
   const { cardColor, content, fontColor, fontSize, fontFam, box } = props;
@@ -94,49 +95,92 @@ const CardData = [
     list: [
       {
         title: 'Future Pet Owner Checklist',
-        content: `Go through this checklist with your family to ensure everyone is on the same page. \n\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]`,
-        checklist: [
-          {
-            text: `All family members have read everything in the What to expect page`,
-            color: 'yellow'
-          },
-          {
-            text: `Have a space for the dog at our home and a crate / kennel / dog bed ready in place`,
-            color: 'yellow'
-          },
-          {
-            text: `Buy essentials such as dental products, dog shampoo, ear cleaner, nail cutter, etc`,
-            color: 'yellow'
-          },
-          {
-            text: `Buy age-and-size-appropriate dog food`,
-            color: 'yellow'
-          },
-          {
-            text: `Buy a collar, a leash, and/or a harness`,
-            color: 'yellow'
-          },
-          {
-            text: `Find the primary veterinarian `,
-            color: 'yellow'
-          },
-          {
-            text: `Already micro-chipped / planning to`,
-            color: 'yellow'
-          },
-          {
-            text: `Be prepared for all necessary vaccinations`,
-            color: 'yellow'
-          },
-          {
-            text: `If 3 - 6 months old, their first Rabies vaccination might be due`,
-            color: 'sage'
-          },
-          {
-            text: `If 6 - 12 months old, this is when they get neutered/spayed if not done yet`,
-            color: 'sage'
-          },
-        ]
+        customize: (
+          <View className="w-[70vw] mb-1">
+            <Checkbox 
+              text="All family members have read everything in the" 
+              color="yellow" 
+              linked={
+                <Text>
+                  <Text 
+                    onPress={() => router.push('/expect')}
+                    className="font-rs-med text-yellow"
+                    style={{ textDecorationLine: 'underline' }}
+                  >
+                    What to Expect
+                  </Text> 
+                  {" "}page
+                </Text>
+              }
+            />
+            <Checkbox 
+              text="Have a space for the dog at home and a crate / kennel / dog bed ready in place" 
+              color="yellow" 
+            />
+            <Checkbox 
+              text="Buy essentials such as dental products, dog shampoo, ear cleaner, nail cutter" 
+              color="yellow" 
+            />
+            <Checkbox 
+              text="Buy age-and-size-appropriate dog food" 
+              color="yellow" 
+            />
+            <Checkbox 
+              text="Buy a collar, a leash, and/or a harness" 
+              color="yellow" 
+            />
+            <Checkbox 
+              text="Find the primary veterinarian" 
+              color="yellow" 
+            />
+            <Checkbox 
+              text="Already micro-chipped / planning to" 
+              color="yellow" 
+            />
+            <Checkbox 
+              text="Be prepared for all necessary vaccinations" 
+              color="yellow" 
+              sideNote={
+                <Link 
+                  href="https://www.petmd.com/dog/care/dog-vaccinations-for-every-lifestage"
+                >
+                  <Text 
+                    className="font-ruda-sb text-yellow text-[12px]"
+                    style={{ 
+                      textDecorationLine: 'underline',
+                      textAlign: 'right' 
+                    }}
+                  >
+                    What vaccinations are necessary?
+                  </Text> 
+                </Link>
+              }
+            />
+            <Checkbox 
+              text="If 3 - 6 months old, their first Rabies vaccination might be due" 
+              color="sage" 
+            />
+            <Checkbox 
+              text="If 6 - 12 months old, this is when they get neutered/spayed if not done yet" 
+              color="sage" 
+              sideNote={
+                <Link 
+                  href="https://www.brown.edu/Research/Colwill_Lab/CBP/spaynueter.htm#:~:text=Health%20Benefits%20of%20Spaying%20and%20Neutering&text=They%20also%20have%20a%20much,chances%20of%20developing%20testicular%20cancer."
+                >
+                  <Text 
+                    className="font-ruda-sb text-sage text-[12px]"
+                    style={{ 
+                      textDecorationLine: 'underline',
+                      textAlign: 'right' 
+                    }}
+                  >
+                    Why should my pet be neutered/spayed?
+                  </Text> 
+                </Link>
+              }
+            />
+          </View>
+        )
       }
     ]
   },
@@ -146,7 +190,7 @@ const CardData = [
       {
         title: 'Are you financially ready for the journey ahead?',
         customize: (
-          <View className="w-70vw] mb-1">
+          <View className="w-[70vw] mb-1">
             <CardText 
               cardColor="white"
               fontFam="font-ruda-reg" 
@@ -297,7 +341,7 @@ const CardData = [
             <CardText 
               cardColor="black"
               fontFam="font-ruda-reg" 
-              content="While home training is essential, your pet may also benefit from professional training assistance. Be sure to have access to reputable training institutions or behaviorists to support you if any challenges arise."
+              content="While home training is essential, your pet may also benefit from, sometimes require, professional training assistance. Be sure to have access to reputable training institutions or behaviorists to support you if any challenges arise."
               box="pb-2"
             />
           </View>

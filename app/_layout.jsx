@@ -87,6 +87,13 @@ export default function RootLayout() {
           }}
         />
         <Stack.Screen 
+          name="expect"
+          options={{
+            title: '',
+            headerRight: () => renderTitle('What to Expect'),
+          }}
+        />
+        <Stack.Screen 
           name="guides"
           options={{
             title: '',

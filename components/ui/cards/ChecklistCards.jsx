@@ -12,9 +12,8 @@ const ChecklistCards = (props) => {
           key={index}
           index={index + 2}
           title={item.title}
-          content={item.content}
+          customize={item.customize}
           mb={index === data.length - 1 ? 'mb-8' : 'mb-6'}
-          checklist={item.checklist}
         />
       ))}
     </View>

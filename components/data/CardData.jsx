@@ -34,6 +34,83 @@ const CardData = [
     ]
   },
   {
+    page: 'adoption',
+    list: [
+      {
+        title: 'Haven’t started the adoption process yet?',
+        content: `Raising a pet is a long-term commitment. Are you prepared to dedicate the time, energy, and resources your pet will need every day? \n[button] \nSelect your location and search nearby shelters. Filter by age, breed, size, gender, and behavior traits to find your pur-fect companion!\n[button] \n\nOr take a 1-minute quiz to find out where your future pet is right now!\n[button]`,
+        buttons: [
+          {
+            type: 'expect',
+            to: '/expect',
+            text: 'What to Expect'
+          },
+          {
+            type: 'finder',
+            to: 'https://www.petfinder.com/',
+            text: 'PetFinder'
+          },
+          {
+            type: 'finder',
+            to: 'https://www.petfinder.com/user/profile/create/?experience=loginAtEnd',
+            text: 'PetFinder Quiz'
+          }
+        ]
+      },
+    ]
+  },
+  {
+    page: 'checklist',
+    list: [
+      {
+        title: 'Future Pet Owner Checklist',
+        content: `Go through this checklist with your family to ensure everyone is on the same page. \n\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]\n[checklist]`,
+        checklist: [
+          {
+            text: `All family members have read everything in the What to expect page`,
+            color: 'yellow'
+          },
+          {
+            text: `Have a space for the dog at our home and a crate / kennel / dog bed ready in place`,
+            color: 'yellow'
+          },
+          {
+            text: `Buy essentials such as dental products, dog shampoo, ear cleaner, nail cutter, etc`,
+            color: 'yellow'
+          },
+          {
+            text: `Buy age-and-size-appropriate dog food`,
+            color: 'yellow'
+          },
+          {
+            text: `Buy a collar, a leash, and/or a harness`,
+            color: 'yellow'
+          },
+          {
+            text: `Find the primary veterinarian `,
+            color: 'yellow'
+          },
+          {
+            text: `Already micro-chipped / planning to`,
+            color: 'yellow'
+          },
+          {
+            text: `Be prepared for all necessary vaccinations`,
+            color: 'yellow'
+          },
+          {
+            text: `If 3 - 6 months old, their first Rabies vaccination might be due`,
+            color: 'sage'
+          },
+          {
+            text: `If 6 - 12 months old, this is when they get neutered/spayed if not done yet`,
+            color: 'sage'
+          },
+        ]
+      }
+    ]
+  },
+  {
     page: 'puppy',
     list: [
       {

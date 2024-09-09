@@ -19,6 +19,15 @@ const noteData = [
     ]
   },
   {
+    page: 'adoption',
+    list: [
+      {
+        position: 'top',
+        content: `Adopting a pet is a lifelong commitment, and there’s a lot to consider before bringing your new companion home. Explore essential tips and insights to ensure you’re fully prepared for your fur-ever family member.`
+      }
+    ]
+  },
+  {
     page: 'puppy',
     list: [
       {

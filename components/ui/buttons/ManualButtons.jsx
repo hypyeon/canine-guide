@@ -6,7 +6,7 @@ import { router } from 'expo-router'
 const data = [
   {
     text: 'Pre-adoption Manual',
-    to: '/manual'
+    to: '/adoption'
   },
   {
     text: 'Guides for Each Life Stage',

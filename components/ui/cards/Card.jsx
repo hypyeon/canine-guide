@@ -1,23 +1,28 @@
-import { Text, View, Image, TouchableOpacity } from 'react-native'
-import React from 'react'
+import { Text, View, Image, TouchableOpacity, Linking } from 'react-native'
+import React, { useState } from 'react'
 import Feather from '@expo/vector-icons/Feather';
-import { Link } from 'expo-router'
+import { Link, router } from 'expo-router'
 
 import appstorew from '../../../assets/images/icon-ios-w.png'
 import googleplayw from '../../../assets/images/icon-android-w.png'
 import appstoreb from '../../../assets/images/icon-ios-b.png'
 import googleplayb from '../../../assets/images/icon-android-b.png'
 
+import Buttons from '../buttons/Buttons';
+import Checkbox from '../checkbox/Checkbox';
+
 const Card = (props) => {
-  const { index, title, src, content, href, mb, bold = [], unsafe = Boolean, list = [], apps, openIos, openAndroid } = props;
+  const { index, title, src, content, href, mb, bold = [], unsafe = Boolean, list = [], apps, openIos, openAndroid, buttons = [], checklist = [] } = props;
 
   const bgColor = index % 2 === 0 ? 'bg-black' : 'bg-white';
   const txtColor = index % 2 === 0 ? 'text-white' : 'text-black';
 
   const renderContent = () => {
-    let parts = content.split(/(\[bold\]|\[list\])/);
+    let parts = content.split(/(\[bold\]|\[list\]|\[button\]|\[checklist\])/);
     let boldIndex = 0;
     let listIndex = 0;
+    let btnIndex = 0;
+    let checklistIndex = 0;
 
     return parts.map((part, index) => {
       if (part === '[bold]' && bold[boldIndex]) {
@@ -54,6 +59,73 @@ const Card = (props) => {
             </View>
           </View>          
         )
+      } else if (part === '[button]' && buttons[btnIndex]) {
+        const current = buttons[btnIndex];
+        btnIndex++;
+
+        const itemsPosition = (type) => {
+          if (type === 'expect') {
+            return 'items-center pt-3 pb-4';
+          } else {
+            return 'items-end pt-2';
+          }
+        }
+
+        const handleBtn = () => {
+          if (current.type === 'finder') {
+            Linking.openURL(current.to)
+            .catch((err) => {
+              console.error("Failed to open URL: ", err);
+            })
+          }
+          return router.push(current.to);
+        }
+
+        return (
+          <View 
+            key={index} 
+            className={`w-[68vw] justify-center ${itemsPosition(current.type)}`}
+          >
+            <Buttons 
+              key={`button-${index}`}
+              type={current.type}
+              text={current.text}
+              handlePress={handleBtn}
+            />
+          </View>
+        )
+      } else if (part === '[checklist]' && checklist[checklistIndex]) {
+        const current = checklist[checklistIndex];
+        checklistIndex++;
+
+        const [ isChecked, setIsChecked ] = React.useState(false);
+
+        const handleCheck = () => {
+          setIsChecked(!isChecked);
+        }
+
+        const renderColor = (color) => {
+          switch (color) {
+            case 'yellow':
+              return '#f7b32b';
+            case 'sage':
+              return '#a9e5bb';
+            default:
+              return;
+          }
+        }
+
+        return (
+          <View className="pb-1">
+            <Checkbox 
+              key={`checklist-${index}`} 
+              text={current.text}
+              color={renderColor(current.color)}
+              isChecked={isChecked}
+              handleCheck={handleCheck}
+            />
+          </View>
+        )
       } else {
         return <Text key={`text-${index}`}>{part}</Text>;
       }
@@ -62,15 +134,25 @@ const Card = (props) => {
 
   const renderFoodContent = () => {
     return (
-      <View className={`${index}`} key={index}>
+      <View key={index}>
         <View>
-          <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-[14px]`}>{content[0]}</Text>
+          <Text 
+            key={index}
+            className={`${txtColor} w-[68vw] font-ruda-reg mb-[14px]`}
+          >
+            {content[0]}
+          </Text>
         </View>
         <View className="mb-[3px]">
           <Text className="w-[68vw] font-ruda-b text-red">Potential effects</Text>
         </View>
         <View>
-          <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-1`}>{content[1]}</Text>
+          <Text 
+            key={index}
+            className={`${txtColor} w-[68vw] font-ruda-reg mb-1`}
+          >
+            {content[1]}
+          </Text>
         </View>
       </View>
     )
@@ -130,7 +212,7 @@ const Card = (props) => {
           resizeMode="contain"
         />
       )}
-      <Text className={`${txtColor} w-[68vw] font-ruda-reg mb-1`}>
+      <Text className={`${index} ${txtColor} w-[68vw] font-ruda-reg mb-1`}>
         {href ? (
           <>"{renderContent()}"</>
         ) : (

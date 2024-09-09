@@ -1,6 +1,6 @@
 import { Text, View, Image, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { Link } from 'expo-router'
+import Feather from '@expo/vector-icons/Feather';
 
 const Buttons = (props) => {
   const { type, bgColor, src, text, txtColor, onShare, mb, imgPosition, imgSize, handlePress } = props;
@@ -15,6 +15,10 @@ const Buttons = (props) => {
         return `bg-sage border-2 border-black ${mb}`;
       case 'resource':
         return `bg-black ${mb}`;
+      case 'expect':
+        return 'bg-black rounded-xl shadow-sm';
+      case 'finder': 
+        return 'bg-yellow shadow-sm';
       default:
         return 'bg-yellow text-yellowtxt';
     }
@@ -90,7 +94,36 @@ const Buttons = (props) => {
           </View>
         </TouchableOpacity> 
       )
-    }
+    } else if (type === 'expect') {
+      return (
+        <TouchableOpacity 
+          className='py-3 px-6'
+          onPress={handlePress}
+        >
+          <Text 
+            className="text-sage font-rs-reg text-xl text-[16px] text-center"
+          >
+            {text}
+          </Text>
+        </TouchableOpacity>
+      )
+    } else if (type === 'finder') {
+      return (
+        <TouchableOpacity 
+          className='py-2 pl-8 pr-6 flex-row'
+          onPress={handlePress}
+        >
+          <Text 
+            className="text-black font-rs-reg text-xl text-[16px] text-center"
+          >
+            {text}
+          </Text>
+          <View className="pl-1 pt-[1px]">
+            <Feather name="external-link" size={14} color={`#1e212b`} />
+          </View>
+        </TouchableOpacity>
+      )
+    } 
   }
 
   return (

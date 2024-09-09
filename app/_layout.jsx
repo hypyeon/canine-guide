@@ -80,6 +80,13 @@ export default function RootLayout() {
           }}
         />
         <Stack.Screen 
+          name="adoption"
+          options={{
+            title: '',
+            headerRight: () => renderTitle('Pre-adoption Manual'),
+          }}
+        />
+        <Stack.Screen 
           name="guides"
           options={{
             title: '',

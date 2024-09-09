@@ -16,6 +16,7 @@ const Checkbox = (props) => {
       textStyle={{ 
         fontSize: 14, 
         textDecorationLine: "none", 
+        color: 'white'
       }}
       isChecked={isChecked}
       onPress={handleCheck}

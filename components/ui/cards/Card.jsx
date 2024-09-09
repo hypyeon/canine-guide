@@ -12,7 +12,7 @@ import Buttons from '../buttons/Buttons';
 import Checkbox from '../checkbox/Checkbox';
 
 const Card = (props) => {
-  const { index, title, src, content, href, mb, bold = [], unsafe = Boolean, list = [], apps, openIos, openAndroid, buttons = [], checklist = [] } = props;
+  const { index, title, src, content, href, mb, bold = [], unsafe = Boolean, list = [], apps, openIos, openAndroid, buttons = [], checklist = [], customize } = props;
 
   const bgColor = index % 2 === 0 ? 'bg-black' : 'bg-white';
   const txtColor = index % 2 === 0 ? 'text-white' : 'text-black';
@@ -84,7 +84,7 @@ const Card = (props) => {
         return (
           <View 
             key={index} 
-            className={`w-[68vw] justify-center ${itemsPosition(current.type)}`}
+            className={`w-[70vw] justify-center ${itemsPosition(current.type)}`}
           >
             <Buttons 
               key={`button-${index}`}
@@ -116,7 +116,7 @@ const Card = (props) => {
         }
 
         return (
-          <View className="pb-1">
+          <View key={index} className="pb-1">
             <Checkbox 
               key={`checklist-${index}`} 
               text={current.text}
@@ -127,35 +127,70 @@ const Card = (props) => {
           </View>
         )
       } else {
-        return <Text key={`text-${index}`}>{part}</Text>;
+        return (
+          <Text 
+            key={index} 
+            className={`${txtColor} w-[70vw] font-ruda-reg mb-1`}
+          >
+            {part}
+          </Text>
+        );
       }
     })
   }
 
+  const renderCustomized = () => {
+    return customize;
+  }
+
   const renderFoodContent = () => {
     return (
-      <View key={index}>
+      <View key={`${index}`}>
         <View>
           <Text 
-            key={index}
-            className={`${txtColor} w-[68vw] font-ruda-reg mb-[14px]`}
+            className={`${txtColor} w-[70vw] font-ruda-reg mb-[14px]`}
           >
             {content[0]}
           </Text>
         </View>
         <View className="mb-[3px]">
-          <Text className="w-[68vw] font-ruda-b text-red">Potential effects</Text>
+          <Text className="w-[70vw] font-ruda-b text-red">Potential effects</Text>
         </View>
         <View>
           <Text 
-            key={index}
-            className={`${txtColor} w-[68vw] font-ruda-reg mb-1`}
+            className={`${txtColor} w-[70vw] font-ruda-reg mb-1`}
           >
             {content[1]}
           </Text>
         </View>
       </View>
     )
+  }
+
+  const chooseContent = () => {
+    if (content) {
+      let toRender;
+
+      if (href) {
+        toRender = <>"{renderContent()}"</>
+      } else {
+        if (unsafe === true) {
+          toRender = <>{renderFoodContent()}</>;
+        } else {
+          toRender = <>{renderContent()}</>;
+        }
+      }
+
+      return (
+        <Text className={`${index} ${txtColor} w-[70vw] font-ruda-reg mb-1`}>
+          {toRender}
+        </Text>
+      )
+    } else {
+      return (
+        <>{renderCustomized()}</>
+      )
+    }
   }
 
   const createAppLink = (platform, index) => {
@@ -185,11 +220,11 @@ const Card = (props) => {
 
   return (
     <View 
-      className={`${bgColor} ${mb} shadow-xl rounded-2xl w-[80vw] justify-center items-center p-4`}
+      className={`${bgColor} ${mb} shadow-xl rounded-2xl w-[82vw] justify-center items-center p-4`}
     >
       {href ? (
-        <Link href={href} className='flex flex-row w-[68vw]'>
-          <Text key={index} className={`${txtColor} w-[68vw] pb-4 mb-8 font-rs-reg text-[16px] leading-5`}>
+        <Link href={href} className='flex flex-row w-[70vw]'>
+          <Text key={index} className={`${txtColor} w-[70vw] pb-4 mb-8 font-rs-reg text-[16px] leading-5`}>
             {title}
           </Text>
           <View className="pl-1">
@@ -197,14 +232,14 @@ const Card = (props) => {
           </View>
         </Link>
       ) : (
-        <Text key={index} className={`${txtColor} w-[68vw] pb-1 font-rs-reg text-[16px] leading-5`}>
+        <Text key={index} className={`${txtColor} w-[70vw] pb-1 font-rs-reg text-[16px] leading-5`}>
           {unsafe === true ? 
             <>
               <Text className="text-[13px]">❌</Text> {title}
             </> : title}
         </Text>
       )}
-      <View className="border-b border-yellow mt-2 mb-4 w-[72vw]" />
+      <View className="border-b border-yellow mt-2 mb-4 w-[74vw]" />
       { src && (
         <Image 
           source={src}
@@ -212,16 +247,10 @@ const Card = (props) => {
           resizeMode="contain"
         />
       )}
-      <Text className={`${index} ${txtColor} w-[68vw] font-ruda-reg mb-1`}>
-        {href ? (
-          <>"{renderContent()}"</>
-        ) : (
-          <>{unsafe === true ? renderFoodContent() : renderContent()}</>
-        )}
-      </Text>
+      {chooseContent()}
       { apps && (
         <View 
-          className="flex flex-row w-[68vw] pt-3 pb-1 justify-center items-center gap-3"
+          className="flex flex-row w-[70vw] pt-3 pb-1 justify-center items-center gap-3"
           key={index}
         >
           {createAppLink('iOS', index)}

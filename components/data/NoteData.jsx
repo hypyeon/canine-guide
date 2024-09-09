@@ -28,6 +28,15 @@ const noteData = [
     ]
   },
   {
+    page: 'expect',
+    list: [
+      {
+        position: 'top',
+        content: `Bringing a new dog into your home is an exciting and rewarding experience. It's essential to prepare your home, family, and lifestyle to ensure a smooth transition and a strong bond with your new furry friend. \n\nRemember, you are everything to your pet. If you anticipate any obstacles that might prevent you from giving them the life they deserve, reconsider adoption. A pet’s well-being should never be compromised by unexpected challenges.`
+      }
+    ]
+  },
+  {
     page: 'puppy',
     list: [
       {

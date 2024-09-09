@@ -9,6 +9,36 @@ import wp from '../../assets/images/logo-tool-wp.png'
 import byte from '../../assets/images/logo-tool-byte.png'
 import pup from '../../assets/images/logo-tool-pup.png'
 
+import { Text, View, TouchableOpacity } from 'react-native'
+import { router } from 'expo-router'
+
+const CardText = (props) => {
+  const { cardColor, content, fontColor, fontSize, fontFam, box } = props;
+
+  return (
+    <View className={`${box}`}>
+      <Text 
+        className={
+          `${cardColor === 'white' ? 'text-black' : 'text-white'} ${fontFam} ${fontSize} ${fontColor}`
+        }
+      >
+        {content}
+      </Text>
+    </View>
+  )
+}
+
+const ListItem = ({ content }) => {
+  return (
+    <CardText 
+      content={"\u2022 " + content} 
+      fontFam="font-ruda-reg"
+      cardColor="white"
+      box="mb-[6px]"
+    />
+  );
+}
+
 const CardData = [
   {
     page: 'donation',
@@ -107,6 +137,189 @@ const CardData = [
             color: 'sage'
           },
         ]
+      }
+    ]
+  },
+  {
+    page: 'expect',
+    list: [
+      {
+        title: 'Are you financially ready for the journey ahead?',
+        customize: (
+          <View className="w-70vw] mb-1">
+            <CardText 
+              cardColor="white"
+              fontFam="font-ruda-reg" 
+              content="Owning a pet comes with financial responsibilities. Consider recurring costs."
+              box="mb-1 px-2"
+            />
+            <CardText 
+              fontColor="text-yellowtxt shadow-sm"
+              fontFam="font-ruda-b" 
+              content="Monthly"
+              box="my-2 pt-1 px-2"
+            />
+            <View>
+              <Text className="font-ruda-reg text-black mb-[6px]">{"\u2022"} Preventative medications <Text className="text-[12px]">(Heartworm, flea & tick prevention)</Text>: $15 ~ $40</Text>
+              <ListItem content="Food and Treats: $40 ~ $150" />
+              <ListItem content="Toys and Enrichment: $10 ~ $50" />
+              <Text className="font-ruda-reg text-black mb-[6px]">{"\u2022"} <Text className="text-[12px]">(optional)</Text> Health Insurance: $25 ~ $70</Text>
+              <Text className="font-ruda-reg text-black mb-[6px]">{"\u2022"} <Text className="text-[12px]">(if applicable)</Text> Daycare/Boarding: $100 ~ $500</Text>
+              <Text className="font-ruda-reg text-black mb-[6px]">{"\u2022"} <Text className="text-[12px]">(if applicable)</Text> Grooming: $30 ~ $90</Text>
+            </View>
+            <CardText 
+              fontColor="text-sagetxt shadow-sm"
+              fontFam="font-ruda-b" 
+              content="Annually"
+              box="my-2 pt-1 px-2"
+            />
+            <View>
+              <ListItem content="Vaccinations: $75 - $300" />
+              <ListItem content="Routine Check-ups: $50 - $150" />
+              <ListItem content="Pet Licensing: $10 - $80" />
+              <Text className="font-ruda-reg text-black mb-[6px]">{"\u2022"} <Text className="text-[12px]">(recommended)</Text> Dental Cleaning: $300 - $700</Text>
+            </View>
+            <CardText 
+              fontColor="text-black"
+              fontFam="font-ruda-reg" 
+              content="These figures are averages and can vary significantly depending on factors like your location, the size and breed of your pet, and any specific health or dietary needs they may have. It's important to budget for both expected and unexpected costs to ensure you're fully prepared for the financial responsibilities."
+              box="my-2 pt-1 px-2"
+              fontSize="text-[12px]"
+            />
+          </View>
+        )
+      },
+      {
+        title: 'Are you certain that you’re choosing a pet who fits well with your home, family, and lifestyle?',
+        customize: (
+          <View className="w-[70vw] mb-1">
+            <CardText 
+              cardColor="black"
+              fontFam="font-ruda-reg" 
+              content="Before bringing a pet into your home, make sure everyone in the household is fully on board. Conflicting feelings, allergies, or existing pets who might not accept a new companion, can create stress for both the pet and your family."
+              box="pb-4"
+            />
+            <CardText 
+              cardColor="black"
+              fontFam="font-ruda-reg" 
+              content="Ensure your living space is suitable, whether it's checking that your lease allows pets or that there's enough room for them to move around freely."
+              box="pb-4"
+            />
+            <CardText 
+              cardColor="black"
+              fontFam="font-ruda-reg" 
+              content="If your lifestyle involves frequent travel or long hours away from home, consider how you will provide consistent care for your pet. Pets thrive on routine and companionship, and long absences can lead to loneliness and anxiety."
+              box="pb-4"
+            />
+            <CardText 
+              cardColor="black"
+              fontFam="font-ruda-reg" 
+              content="A pet is a lifelong commitment. Rehoming or returning them to a shelter after they’ve bonded with you can cause emotional distress and behavioral issues. Make sure you’re fully prepared to be their forever home."
+              box="pb-2"
+            />
+          </View>
+        )
+      },
+      {
+        title: `Are you willing to prioritize your pet’s needs every day?`,
+        customize: (
+          <View className="w-70vw] mb-1">
+            <CardText 
+              cardColor="white"
+              fontFam="font-ruda-reg" 
+              content="Before adopting, consider the lifestyle changes you'll need to make. Dogs are sensitive to routines, so ensure meal times, potty breaks, and walks are consistently scheduled. This not only provides stability for your dog but also helps you maintain a more structured daily routine."
+              box="mb-1 px-2"
+            />
+            <CardText 
+              fontColor="text-yellowtxt shadow-sm"
+              fontFam="font-ruda-b" 
+              content="Daily responsibilities"
+              box="my-2 pt-1 px-2"
+            />
+            <View>
+              <ListItem content="Ensure they have access to clean water" />
+              <ListItem content="Provide fresh and balanced meals" />
+              <CardText 
+                fontColor="text-yellowtxt"
+                fontFam="font-rs-reg"
+                fontSize="text-[11px] leading-[14px]"
+                content="Follow the feeding instructions on your dog's food packaging, adjusting the amount and frequency based on their size and age. If you're unsure, consult with your vet for personalized guidance."
+                box="pl-2 pb-3"
+              />
+              <ListItem content="Regular potty breaks throughout the day" />
+              <CardText 
+                fontColor="text-yellowtxt"
+                fontFam="font-rs-reg"
+                fontSize="text-[11px] leading-[14px]"
+                content="Be aware that puppies and younger dogs need to go out for potty breaks as often as every 1-2 hours, including shortly after meals, playtime, and naps."
+                box="pl-2 pb-3"
+              />
+              <ListItem content="Brush their teeth every day" />
+              <ListItem content="Go on regular walks or have play sessions with your dog to keep them active and healthy" />
+              <ListItem content="Utilize toys, puzzles, and games for mental stimulation" />
+              <ListItem content="Pay close attention to your pet’s health by observing any changes in their appetite, behavior, or energy levels." />
+              <ListItem content="Spend quality time boding with them" />
+            </View>
+            <CardText 
+              fontColor="text-sagetxt shadow-sm"
+              fontFam="font-ruda-b" 
+              content="Ongoing Care"
+              box="my-2 pt-1 px-2"
+            />
+            <View>
+              <ListItem content="Keep their vaccinations up to date, schedule vet appointments in advance, and mark monthly prevention treatments on your calendar" />
+              <ListItem content="Regularly bathe them every 4 - 6 weeks" />
+              <CardText 
+                fontColor="text-sagetxt"
+                fontFam="font-rs-reg"
+                fontSize="text-[11px] leading-[14px]"
+                content="Dogs with oily coats may need more frequent baths, while dogs with dry skin or sensitive skin might benefit from less frequent bathing. Always consider your dog's specific needs and consult your vet if you're unsure."
+                box="pl-2 pb-3"
+              />
+              <ListItem content="Brush your pet’s coat and clean their ears" />
+              <ListItem content="Regularly clean up after your pet, including vacuuming fur, wiping paws, and washing their bedding" />
+              <ListItem content="Reinforce positive behavior with consistent training and address any behavioral issues as they arise" />
+              <ListItem content="Provide opportunities for them to interact with other animals and people, helping them become well-adjusted and confident" />
+            </View>
+          </View>
+        )
+      },
+      {
+        title: `Are you ready to handle behavioral issues and provide consistent training and care?`,
+        customize: (
+          <View className="w-[70vw] mb-1">
+            <CardText 
+              cardColor="black"
+              fontFam="font-ruda-reg" 
+              content="Pets require patience and understanding. "
+              box="pb-4"
+            />
+            <CardText 
+              cardColor="black"
+              fontFam="font-ruda-reg" 
+              content="While home training is essential, your pet may also benefit from professional training assistance. Be sure to have access to reputable training institutions or behaviorists to support you if any challenges arise."
+              box="pb-2"
+            />
+          </View>
+        )
+      },
+      {
+        title: `Are you prepared to adapt and provide for them through all stages of their life?`,
+        customize: (
+          <View className="w-[70vw] mb-1">
+            <Text className="font-ruda-reg text-black mb-[6px]">
+              A pet’s needs will change as they grow. Check out{" "}
+              <Text 
+                onPress={() => router.push('/guides')}
+                className="font-rs-reg text-sagetxt"
+                style={{ textDecorationLine: 'underline' }}
+              >
+                Guides for Each Life Stage
+              </Text> 
+              {" "}page to learn more.
+            </Text>
+          </View>
+        )
       }
     ]
   },
